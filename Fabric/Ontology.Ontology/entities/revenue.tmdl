@@ -1,0 +1,277 @@
+entity revenue
+	lineageTag: 8650406b-7a7f-4326-b94b-306d354d9ea4
+	backingTable: revenue
+
+	property Invoice_No
+		dataType: int64
+		lineageTag: 780079de-14eb-45bf-85e2-b909e3fa731e
+
+		backingConfiguration
+			valueColumn: revenue.Invoice_No
+
+	property Invoice_Position
+		dataType: int64
+		lineageTag: 3380c05e-0dc2-4c25-b2ec-71ae407c5f1b
+
+		backingConfiguration
+			valueColumn: revenue.Invoice_Position
+
+	property Quantity
+		dataType: double
+		lineageTag: 58758fac-1bd5-4610-9f3a-a483fb5e6e4b
+
+		backingConfiguration
+			valueColumn: revenue.Quantity
+
+	property UoM_Unit_of_measurement_
+		dataType: string
+		lineageTag: e07a03ee-1916-41b2-840c-b9c77d2e5d1f
+
+		backingConfiguration
+			valueColumn: revenue.UoM_Unit_of_measurement_
+
+	property Net_weight
+		dataType: double
+		lineageTag: 050ba5da-5bf7-4c64-ad24-4ef185fdaec7
+
+		backingConfiguration
+			valueColumn: revenue.Net_weight
+
+	property Gross_weight
+		dataType: double
+		lineageTag: e8d93f70-61d2-424c-a1c4-98a2b4f3db36
+
+		backingConfiguration
+			valueColumn: revenue.Gross_weight
+
+	property Delivery_No
+		dataType: int64
+		lineageTag: b6222977-c91d-4c62-9c72-0410e3a858d7
+
+		backingConfiguration
+			valueColumn: revenue.Delivery_No
+
+	property Sales_order_No
+		dataType: int64
+		lineageTag: 59b29623-3308-4142-af18-6f84b32b4a15
+
+		backingConfiguration
+			valueColumn: revenue.Sales_order_No
+
+	property Delivery_Position
+		dataType: int64
+		lineageTag: c5a74b0d-ff7c-4408-97a0-92270bd8ea54
+
+		backingConfiguration
+			valueColumn: revenue.Delivery_Position
+
+	property Sales_order_Position
+		dataType: int64
+		lineageTag: 54ccb486-bb4d-4fd3-9066-90e3ff93ebd7
+
+		backingConfiguration
+			valueColumn: revenue.Sales_order_Position
+
+	property Material
+		dataType: int64
+		lineageTag: e2656bb9-6e6d-4698-9e7f-6d1dcc6bad14
+
+		backingConfiguration
+			valueColumn: revenue.Material
+
+	property Material_Description
+		dataType: string
+		lineageTag: de9160b1-bc47-4817-9aec-e7b983f9886e
+
+		backingConfiguration
+			valueColumn: revenue.Material_Description
+
+	property Plant
+		dataType: int64
+		lineageTag: 2fa9cdef-a6d3-40cd-b310-d9ac30c2a690
+
+		backingConfiguration
+			valueColumn: revenue.Plant
+
+	property Invoice_Creation_Date
+		dataType: string
+		lineageTag: fd9f2d23-f678-4140-bd91-b89bf81d81fd
+
+		backingConfiguration
+			valueColumn: revenue.Invoice_Creation_Date
+
+	property Storage_location___department
+		dataType: string
+		lineageTag: fd65b7e4-31f7-4ade-8b32-0c78b6e7ced7
+
+		backingConfiguration
+			valueColumn: revenue.Storage_location___department
+
+	property Invoice_Type_Billing_Type
+		dataType: string
+		lineageTag: 721cdf76-c2d9-48d1-a911-c3454a74cf50
+
+		backingConfiguration
+			valueColumn: revenue.Invoice_Type_Billing_Type
+
+	property Sales_Organization
+		dataType: string
+		lineageTag: 1ab0b57a-84d1-411a-81b2-156fe8bc4fad
+
+		backingConfiguration
+			valueColumn: revenue.Sales_Organization
+
+	property Distribution_Channel
+		dataType: string
+		lineageTag: ce0f3eb4-c0fc-4c77-984d-2ec5d6faa4de
+
+		backingConfiguration
+			valueColumn: revenue.Distribution_Channel
+
+	property Invoice_Date
+		dataType: string
+		lineageTag: a33c5803-f0ab-43cc-99c7-44beb0c576fe
+
+		backingConfiguration
+			valueColumn: revenue.Invoice_Date
+
+	property Inco_Term
+		dataType: string
+		lineageTag: 74a27782-2a06-4f4a-bb65-6a2630679d64
+
+		backingConfiguration
+			valueColumn: revenue.Inco_Term
+
+	property Inco_Term_II
+		dataType: string
+		lineageTag: f80b8b85-a283-432d-a931-fb2451adb1fb
+
+		backingConfiguration
+			valueColumn: revenue.Inco_Term_II
+
+	property Customer
+		dataType: int64
+		lineageTag: 5706f5ac-84b8-4348-89c7-a3b377d33af3
+
+		backingConfiguration
+			valueColumn: revenue.Customer
+
+	property Currency_Exchange_Rate
+		dataType: double
+		lineageTag: 483e0908-cfbb-41b1-b3d0-5a2b90a8a4e2
+
+		backingConfiguration
+			valueColumn: revenue.Currency_Exchange_Rate
+
+	property Sales_order_type
+		dataType: string
+		lineageTag: d8dc411a-31cc-45c8-b742-5171dec911a4
+
+		backingConfiguration
+			valueColumn: revenue.Sales_order_type
+
+	property Division
+		dataType: string
+		lineageTag: 24169691-9dda-455d-9343-8f31efd549ba
+
+		backingConfiguration
+			valueColumn: revenue.Division
+
+	property PO_No
+		dataType: string
+		lineageTag: 5bb8973e-c864-4ea4-9c26-67dfd91c8615
+
+		backingConfiguration
+			valueColumn: revenue.PO_No
+
+	property PO_Date
+		dataType: string
+		lineageTag: acada42a-785b-40d7-852d-64074b31cd98
+
+		backingConfiguration
+			valueColumn: revenue.PO_Date
+
+	property Shop
+		dataType: string
+		lineageTag: e0092220-0c20-45a2-84c8-e717b0cbbbe0
+
+		backingConfiguration
+			valueColumn: revenue.Shop
+
+	property Equipment_Application_Descrip
+		dataType: string
+		lineageTag: ebc6401b-8b17-444e-b8f4-f63954f43700
+
+		backingConfiguration
+			valueColumn: revenue.Equipment_Application_Descrip
+
+	property Land
+		dataType: string
+		lineageTag: 2fc1ae15-85a6-401a-96a0-d7f60be36ac3
+
+		backingConfiguration
+			valueColumn: revenue.Land
+
+	property Customer_Name
+		dataType: string
+		lineageTag: c90bab35-0758-4680-8ffa-4b9989ee42ef
+
+		backingConfiguration
+			valueColumn: revenue.Customer_Name
+
+	property Zone
+		dataType: string
+		lineageTag: e1f721d6-5fb1-4449-ab54-08ef0844222f
+
+		backingConfiguration
+			valueColumn: revenue.Zone
+
+	property Strg_location_dept_Description
+		dataType: string
+		lineageTag: cff87a02-7e2d-4add-a914-1a02aeb55d53
+
+		backingConfiguration
+			valueColumn: revenue.Strg_location_dept_Description
+
+	property Country_Name
+		dataType: string
+		lineageTag: e385a37c-fb8d-4e1f-9fd5-eadbf4038d25
+
+		backingConfiguration
+			valueColumn: revenue.Country_Name
+
+	property Fcode
+		dataType: string
+		lineageTag: 9d29e6a3-6f89-4263-bf9d-5100c8087745
+
+		backingConfiguration
+			valueColumn: revenue.Fcode
+
+	property External_Material_Group
+		dataType: string
+		lineageTag: 30d4232e-455b-4d62-8c23-df2b5ab1b431
+
+		backingConfiguration
+			valueColumn: revenue.External_Material_Group
+
+	property Sales
+		dataType: string
+		lineageTag: e9e64e35-4b82-4055-8e9c-d90fd4a0797c
+
+		backingConfiguration
+			valueColumn: revenue.Sales
+
+	property Amount
+		dataType: double
+		lineageTag: a00f9346-c5f0-477b-95fb-f32a003c4b79
+
+		backingConfiguration
+			valueColumn: revenue.Amount
+
+	property Sub_Zone
+		dataType: string
+		lineageTag: d8b0b998-3110-4f69-b1e9-e1693ab454a1
+
+		backingConfiguration
+			valueColumn: revenue.Sub_Zone
+

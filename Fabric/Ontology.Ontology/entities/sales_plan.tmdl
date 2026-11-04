@@ -1,0 +1,158 @@
+entity sales_plan
+	lineageTag: ddf66165-842d-4318-82ae-e9bd3b036b6d
+	backingTable: sales_plan
+
+	property ABP_FREIGHT
+		dataType: int64
+		lineageTag: d0bbfab0-284f-40af-abef-433a0080e3b3
+
+		backingConfiguration
+			valueColumn: sales_plan.ABP_FREIGHT
+
+	property ABP_REVENUE
+		dataType: double
+		lineageTag: 38512d81-b21c-4258-a8e7-f12ac7565b23
+
+		backingConfiguration
+			valueColumn: sales_plan.ABP_REVENUE
+
+	property ABP_TONNAGE
+		dataType: double
+		lineageTag: e986c6f1-154f-4648-a7a3-f2463ecb050e
+
+		backingConfiguration
+			valueColumn: sales_plan.ABP_TONNAGE
+
+	property AREA_HEAD
+		dataType: string
+		lineageTag: f5b3a2f0-e84f-4b08-a1a3-4dd29f4c0a7d
+
+		backingConfiguration
+			valueColumn: sales_plan.AREA_HEAD
+
+	property CUS_GRP
+		dataType: string
+		lineageTag: 6894c3d4-4033-4fab-b630-c6c0e1727393
+
+		backingConfiguration
+			valueColumn: sales_plan.CUS_GRP
+
+	property CUS_SUBGRP
+		dataType: string
+		lineageTag: b7b9e0d4-a60a-4cbe-9a3b-e6668eba6faa
+
+		backingConfiguration
+			valueColumn: sales_plan.CUS_SUBGRP
+
+	property CUST_NAME
+		dataType: string
+		lineageTag: 0a755aea-9f06-4c7b-b2cb-663ff9837ba5
+
+		backingConfiguration
+			valueColumn: sales_plan.CUST_NAME
+
+	property END_DATE
+		dataType: double
+		lineageTag: c9a08ede-26c7-4d83-9f82-1fd1c7e83d27
+
+		backingConfiguration
+			valueColumn: sales_plan.END_DATE
+
+	property ERDAT
+		dataType: string
+		lineageTag: 720d49db-1ff1-4f33-8324-f056b5db4db7
+
+		backingConfiguration
+			valueColumn: sales_plan.ERDAT
+
+	property ERNAM
+		dataType: string
+		lineageTag: 16927fdf-8585-413b-b8e0-95f08741553b
+
+		backingConfiguration
+			valueColumn: sales_plan.ERNAM
+
+	property ERZET
+		dataType: string
+		lineageTag: c7894c7c-449b-4d47-9325-8efe0d5b64f6
+
+		backingConfiguration
+			valueColumn: sales_plan.ERZET
+
+	property INCOTERM
+		dataType: string
+		lineageTag: 9651648a-8566-48b1-ba9e-03f963423083
+
+		backingConfiguration
+			valueColumn: sales_plan.INCOTERM
+
+	property KUNNR
+		dataType: string
+		lineageTag: db713e04-be39-45c1-9a57-6c465b066080
+
+		backingConfiguration
+			valueColumn: sales_plan.KUNNR
+
+	property PLANNED_FREIGHT
+		dataType: int64
+		lineageTag: 6008d786-fa65-447a-ac9b-17b96041874a
+
+		backingConfiguration
+			valueColumn: sales_plan.PLANNED_FREIGHT
+
+	property PLANNED_REVENUE
+		dataType: int64
+		lineageTag: e232dc91-d906-4974-97c0-48fd9f6dcbb1
+
+		backingConfiguration
+			valueColumn: sales_plan.PLANNED_REVENUE
+
+	property PLANNED_TONNAGE
+		dataType: int64
+		lineageTag: e9ae6879-5283-47bf-aa6e-04323281287e
+
+		backingConfiguration
+			valueColumn: sales_plan.PLANNED_TONNAGE
+
+	property SALES_KAM
+		dataType: string
+		lineageTag: c5490efe-e2d2-4e7f-acea-a466e7aca25a
+
+		backingConfiguration
+			valueColumn: sales_plan.SALES_KAM
+
+	property SALES_TYPE
+		dataType: string
+		lineageTag: 2006bb54-a606-444d-9be7-3d7f01b8b713
+
+		backingConfiguration
+			valueColumn: sales_plan.SALES_TYPE
+
+	property SL_NO
+		dataType: string
+		lineageTag: 902ed2c6-6b30-4b06-bf71-fc49988dfb1f
+
+		backingConfiguration
+			valueColumn: sales_plan.SL_NO
+
+	property SNOP_PRODUCT_GRP
+		dataType: string
+		lineageTag: 2dbd661e-25cc-49a6-a429-8f6c0f7860bd
+
+		backingConfiguration
+			valueColumn: sales_plan.SNOP_PRODUCT_GRP
+
+	property START_DATE
+		dataType: double
+		lineageTag: 06ed2552-85f4-4828-80fa-b3febd631204
+
+		backingConfiguration
+			valueColumn: sales_plan.START_DATE
+
+	property PlanDateForCalendar
+		dataType: string
+		lineageTag: 5979678e-1d6b-454d-a9e4-5ba2b3e48c86
+
+		backingConfiguration
+			valueColumn: sales_plan.PlanDateForCalendar
+

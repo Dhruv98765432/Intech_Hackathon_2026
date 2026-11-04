@@ -1,0 +1,25 @@
+entity customer_group
+	lineageTag: 54f96b8f-05f1-4c23-a6fc-cad0c8d57c66
+	backingTable: customer_group
+
+	property GROUP
+		dataType: string
+		lineageTag: 30f75554-dc50-48f8-a799-896a4ed99b2e
+
+		backingConfiguration
+			valueColumn: customer_group.GROUP
+
+	property NAME
+		dataType: string
+		lineageTag: feeb16cd-0eb9-4d47-b3f7-646d05c01472
+
+		backingConfiguration
+			valueColumn: customer_group.NAME
+
+	property GroupCount
+		dataType: int64
+		lineageTag: 7531a493-0350-4bb4-b463-51f853c05d10
+
+		backingConfiguration
+			valueColumn: customer_group.GroupCount
+

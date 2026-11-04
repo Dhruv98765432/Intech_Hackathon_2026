@@ -1,0 +1,221 @@
+table revenue
+	lineageTag: 1261c2c9-1ae1-4a2b-afe2-46d655702983
+
+	column Invoice_No
+		dataType: int64
+		lineageTag: 780079de-14eb-45bf-85e2-b909e3fa731e
+		sourceColumn: Invoice_No
+
+	column Invoice_Position
+		dataType: int64
+		lineageTag: 3380c05e-0dc2-4c25-b2ec-71ae407c5f1b
+		sourceColumn: Invoice_Position
+
+	column Quantity
+		dataType: double
+		lineageTag: 58758fac-1bd5-4610-9f3a-a483fb5e6e4b
+		sourceColumn: Quantity
+
+	column UoM_Unit_of_measurement_
+		dataType: string
+		lineageTag: e07a03ee-1916-41b2-840c-b9c77d2e5d1f
+		sourceColumn: UoM_Unit_of_measurement_
+
+	column Net_weight
+		dataType: double
+		lineageTag: 050ba5da-5bf7-4c64-ad24-4ef185fdaec7
+		sourceColumn: Net_weight
+
+	column Gross_weight
+		dataType: double
+		lineageTag: e8d93f70-61d2-424c-a1c4-98a2b4f3db36
+		sourceColumn: Gross_weight
+
+	column Delivery_No
+		dataType: int64
+		lineageTag: b6222977-c91d-4c62-9c72-0410e3a858d7
+		sourceColumn: Delivery_No
+
+	column Sales_order_No
+		dataType: int64
+		lineageTag: 59b29623-3308-4142-af18-6f84b32b4a15
+		sourceColumn: Sales_order_No
+
+	column Delivery_Position
+		dataType: int64
+		lineageTag: c5a74b0d-ff7c-4408-97a0-92270bd8ea54
+		sourceColumn: Delivery_Position
+
+	column Sales_order_Position
+		dataType: int64
+		lineageTag: 54ccb486-bb4d-4fd3-9066-90e3ff93ebd7
+		sourceColumn: Sales_order_Position
+
+	column Material
+		dataType: int64
+		lineageTag: e2656bb9-6e6d-4698-9e7f-6d1dcc6bad14
+		sourceColumn: Material
+
+	column Material_Description
+		dataType: string
+		lineageTag: de9160b1-bc47-4817-9aec-e7b983f9886e
+		sourceColumn: Material_Description
+
+	column Plant
+		dataType: int64
+		lineageTag: 2fa9cdef-a6d3-40cd-b310-d9ac30c2a690
+		sourceColumn: Plant
+
+	column Invoice_Creation_Date
+		dataType: string
+		lineageTag: fd9f2d23-f678-4140-bd91-b89bf81d81fd
+		sourceColumn: Invoice_Creation_Date
+
+	column Storage_location___department
+		dataType: string
+		lineageTag: fd65b7e4-31f7-4ade-8b32-0c78b6e7ced7
+		sourceColumn: Storage_location___department
+
+	column Invoice_Type_Billing_Type
+		dataType: string
+		lineageTag: 721cdf76-c2d9-48d1-a911-c3454a74cf50
+		sourceColumn: Invoice_Type_Billing_Type
+
+	column Sales_Organization
+		dataType: string
+		lineageTag: 1ab0b57a-84d1-411a-81b2-156fe8bc4fad
+		sourceColumn: Sales_Organization
+
+	column Distribution_Channel
+		dataType: string
+		lineageTag: ce0f3eb4-c0fc-4c77-984d-2ec5d6faa4de
+		sourceColumn: Distribution_Channel
+
+	column Invoice_Date
+		dataType: string
+		lineageTag: a33c5803-f0ab-43cc-99c7-44beb0c576fe
+		sourceColumn: Invoice_Date
+
+	column Inco_Term
+		dataType: string
+		lineageTag: 74a27782-2a06-4f4a-bb65-6a2630679d64
+		sourceColumn: Inco_Term
+
+	column Inco_Term_II
+		dataType: string
+		lineageTag: f80b8b85-a283-432d-a931-fb2451adb1fb
+		sourceColumn: Inco_Term_II
+
+	column Customer
+		dataType: int64
+		lineageTag: 5706f5ac-84b8-4348-89c7-a3b377d33af3
+		sourceColumn: Customer
+
+	column Currency_Exchange_Rate
+		dataType: double
+		lineageTag: 483e0908-cfbb-41b1-b3d0-5a2b90a8a4e2
+		sourceColumn: Currency_Exchange_Rate
+
+	column Sales_order_type
+		dataType: string
+		lineageTag: d8dc411a-31cc-45c8-b742-5171dec911a4
+		sourceColumn: Sales_order_type
+
+	column Division
+		dataType: string
+		lineageTag: 24169691-9dda-455d-9343-8f31efd549ba
+		sourceColumn: Division
+
+	column PO_No
+		dataType: string
+		lineageTag: 5bb8973e-c864-4ea4-9c26-67dfd91c8615
+		sourceColumn: PO_No
+
+	column PO_Date
+		dataType: string
+		lineageTag: acada42a-785b-40d7-852d-64074b31cd98
+		sourceColumn: PO_Date
+
+	column Shop
+		dataType: string
+		lineageTag: e0092220-0c20-45a2-84c8-e717b0cbbbe0
+		sourceColumn: Shop
+
+	column Equipment_Application_Descrip
+		dataType: string
+		lineageTag: ebc6401b-8b17-444e-b8f4-f63954f43700
+		sourceColumn: Equipment_Application_Descrip
+
+	column Land
+		dataType: string
+		lineageTag: 2fc1ae15-85a6-401a-96a0-d7f60be36ac3
+		sourceColumn: Land
+
+	column Customer_Name
+		dataType: string
+		lineageTag: c90bab35-0758-4680-8ffa-4b9989ee42ef
+		sourceColumn: Customer_Name
+
+	column Zone
+		dataType: string
+		lineageTag: e1f721d6-5fb1-4449-ab54-08ef0844222f
+		sourceColumn: Zone
+
+	column Strg_location_dept_Description
+		dataType: string
+		lineageTag: cff87a02-7e2d-4add-a914-1a02aeb55d53
+		sourceColumn: Strg_location_dept_Description
+
+	column Country_Name
+		dataType: string
+		lineageTag: e385a37c-fb8d-4e1f-9fd5-eadbf4038d25
+		sourceColumn: Country_Name
+
+	column Fcode
+		dataType: string
+		lineageTag: 9d29e6a3-6f89-4263-bf9d-5100c8087745
+		sourceColumn: Fcode
+
+	column External_Material_Group
+		dataType: string
+		lineageTag: 30d4232e-455b-4d62-8c23-df2b5ab1b431
+		sourceColumn: External_Material_Group
+
+	column Sales
+		dataType: string
+		lineageTag: e9e64e35-4b82-4055-8e9c-d90fd4a0797c
+		sourceColumn: Sales
+
+	column Amount
+		dataType: double
+		lineageTag: a00f9346-c5f0-477b-95fb-f32a003c4b79
+		sourceColumn: Amount
+
+	column Sub_Zone
+		dataType: string
+		lineageTag: d8b0b998-3110-4f69-b1e9-e1693ab454a1
+		sourceColumn: Sub_Zone
+
+	partition revenue = entity
+		mode: directLake
+		source
+			entityName: revenue
+			schemaName: dbo
+			expressionSource: 'DirectLake - silver_data'
+
+		annotation ONT_WorkspaceId = a740cbb5-cee1-41d2-bd69-e6c4571cd003
+
+		annotation ONT_ItemId = f26cf26d-61b0-4fb0-80c8-52c15bef8330
+
+		annotation ONT_ItemKind = Warehouse
+
+		annotation ONT_ItemName = silver_data
+
+		annotation ONT_WorkspaceName = intech_fabric_hackathon
+
+		annotation ONT_SqlEndpoint = 42b76ifuwx7eveo4holctsljl4-wxfubj7bz3jedplj43cfohgqam.datawarehouse.fabric.microsoft.com
+
+		annotation ONT_SqlDatabase = silver_data
+
+		annotation ONT_PinnedAtUtc = 2026-11-04T11:43:42.956Z
+

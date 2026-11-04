@@ -1,0 +1,14 @@
+model Model
+
+ref table customer_group
+ref table revenue
+ref table sales
+ref table sales_plan
+
+ref entity sales
+ref entity revenue
+ref entity customer_group
+ref entity sales_plan
+
+ref namespace default
+

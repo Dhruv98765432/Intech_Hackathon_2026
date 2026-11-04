@@ -1,0 +1,41 @@
+table customer_group
+	lineageTag: ba3d3e55-6ce6-45a9-8a0c-135817b2e186
+
+	column GROUP
+		dataType: string
+		lineageTag: 30f75554-dc50-48f8-a799-896a4ed99b2e
+		sourceColumn: GROUP
+
+	column NAME
+		dataType: string
+		lineageTag: feeb16cd-0eb9-4d47-b3f7-646d05c01472
+		sourceColumn: NAME
+
+	column GroupCount
+		dataType: int64
+		lineageTag: 7531a493-0350-4bb4-b463-51f853c05d10
+		sourceColumn: GroupCount
+
+	partition customer_group = entity
+		mode: directLake
+		source
+			entityName: customer_group
+			schemaName: dbo
+			expressionSource: 'DirectLake - silver_data'
+
+		annotation ONT_WorkspaceId = a740cbb5-cee1-41d2-bd69-e6c4571cd003
+
+		annotation ONT_ItemId = f26cf26d-61b0-4fb0-80c8-52c15bef8330
+
+		annotation ONT_ItemKind = Warehouse
+
+		annotation ONT_ItemName = silver_data
+
+		annotation ONT_WorkspaceName = intech_fabric_hackathon
+
+		annotation ONT_SqlEndpoint = 42b76ifuwx7eveo4holctsljl4-wxfubj7bz3jedplj43cfohgqam.datawarehouse.fabric.microsoft.com
+
+		annotation ONT_SqlDatabase = silver_data
+
+		annotation ONT_PinnedAtUtc = 2026-11-04T11:44:12.510Z
+

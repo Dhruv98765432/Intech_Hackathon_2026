@@ -1,0 +1,136 @@
+table sales_plan
+	lineageTag: 13615f52-503f-4922-889f-4c1b886090fd
+
+	column ABP_FREIGHT
+		dataType: int64
+		lineageTag: d0bbfab0-284f-40af-abef-433a0080e3b3
+		sourceColumn: ABP_FREIGHT
+
+	column ABP_REVENUE
+		dataType: double
+		lineageTag: 38512d81-b21c-4258-a8e7-f12ac7565b23
+		sourceColumn: ABP_REVENUE
+
+	column ABP_TONNAGE
+		dataType: double
+		lineageTag: e986c6f1-154f-4648-a7a3-f2463ecb050e
+		sourceColumn: ABP_TONNAGE
+
+	column AREA_HEAD
+		dataType: string
+		lineageTag: f5b3a2f0-e84f-4b08-a1a3-4dd29f4c0a7d
+		sourceColumn: AREA_HEAD
+
+	column CUS_GRP
+		dataType: string
+		lineageTag: 6894c3d4-4033-4fab-b630-c6c0e1727393
+		sourceColumn: CUS_GRP
+
+	column CUS_SUBGRP
+		dataType: string
+		lineageTag: b7b9e0d4-a60a-4cbe-9a3b-e6668eba6faa
+		sourceColumn: CUS_SUBGRP
+
+	column CUST_NAME
+		dataType: string
+		lineageTag: 0a755aea-9f06-4c7b-b2cb-663ff9837ba5
+		sourceColumn: CUST_NAME
+
+	column END_DATE
+		dataType: double
+		lineageTag: c9a08ede-26c7-4d83-9f82-1fd1c7e83d27
+		sourceColumn: END_DATE
+
+	column ERDAT
+		dataType: string
+		lineageTag: 720d49db-1ff1-4f33-8324-f056b5db4db7
+		sourceColumn: ERDAT
+
+	column ERNAM
+		dataType: string
+		lineageTag: 16927fdf-8585-413b-b8e0-95f08741553b
+		sourceColumn: ERNAM
+
+	column ERZET
+		dataType: string
+		lineageTag: c7894c7c-449b-4d47-9325-8efe0d5b64f6
+		sourceColumn: ERZET
+
+	column INCOTERM
+		dataType: string
+		lineageTag: 9651648a-8566-48b1-ba9e-03f963423083
+		sourceColumn: INCOTERM
+
+	column KUNNR
+		dataType: string
+		lineageTag: db713e04-be39-45c1-9a57-6c465b066080
+		sourceColumn: KUNNR
+
+	column PLANNED_FREIGHT
+		dataType: int64
+		lineageTag: 6008d786-fa65-447a-ac9b-17b96041874a
+		sourceColumn: PLANNED_FREIGHT
+
+	column PLANNED_REVENUE
+		dataType: int64
+		lineageTag: e232dc91-d906-4974-97c0-48fd9f6dcbb1
+		sourceColumn: PLANNED_REVENUE
+
+	column PLANNED_TONNAGE
+		dataType: int64
+		lineageTag: e9ae6879-5283-47bf-aa6e-04323281287e
+		sourceColumn: PLANNED_TONNAGE
+
+	column SALES_KAM
+		dataType: string
+		lineageTag: c5490efe-e2d2-4e7f-acea-a466e7aca25a
+		sourceColumn: SALES_KAM
+
+	column SALES_TYPE
+		dataType: string
+		lineageTag: 2006bb54-a606-444d-9be7-3d7f01b8b713
+		sourceColumn: SALES_TYPE
+
+	column SL_NO
+		dataType: string
+		lineageTag: 902ed2c6-6b30-4b06-bf71-fc49988dfb1f
+		sourceColumn: SL_NO
+
+	column SNOP_PRODUCT_GRP
+		dataType: string
+		lineageTag: 2dbd661e-25cc-49a6-a429-8f6c0f7860bd
+		sourceColumn: SNOP_PRODUCT_GRP
+
+	column START_DATE
+		dataType: double
+		lineageTag: 06ed2552-85f4-4828-80fa-b3febd631204
+		sourceColumn: START_DATE
+
+	column PlanDateForCalendar
+		dataType: string
+		lineageTag: 5979678e-1d6b-454d-a9e4-5ba2b3e48c86
+		sourceColumn: PlanDateForCalendar
+
+	partition sales_plan = entity
+		mode: directLake
+		source
+			entityName: sales_plan
+			schemaName: dbo
+			expressionSource: 'DirectLake - silver_data'
+
+		annotation ONT_WorkspaceId = a740cbb5-cee1-41d2-bd69-e6c4571cd003
+
+		annotation ONT_ItemId = f26cf26d-61b0-4fb0-80c8-52c15bef8330
+
+		annotation ONT_ItemKind = Warehouse
+
+		annotation ONT_ItemName = silver_data
+
+		annotation ONT_WorkspaceName = intech_fabric_hackathon
+
+		annotation ONT_SqlEndpoint = 42b76ifuwx7eveo4holctsljl4-wxfubj7bz3jedplj43cfohgqam.datawarehouse.fabric.microsoft.com
+
+		annotation ONT_SqlDatabase = silver_data
+
+		annotation ONT_PinnedAtUtc = 2026-11-04T11:45:46.683Z
+

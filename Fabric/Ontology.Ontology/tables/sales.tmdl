@@ -1,0 +1,656 @@
+table sales
+	lineageTag: 761db90a-157b-45ce-bbfa-c1b3227fd76f
+
+	column InvoiceNo
+		dataType: string
+		lineageTag: 84ef1dac-ca9c-49f9-982f-f406a29474a6
+		sourceColumn: InvoiceNo
+
+	column InvoicePosition
+		dataType: int64
+		lineageTag: 16d3579c-d6bb-4c43-8bb5-33c49595d92c
+		sourceColumn: InvoicePosition
+
+	column Quantity
+		dataType: double
+		lineageTag: 3d47c137-4031-4566-9a2b-8ae3cee104d7
+		sourceColumn: Quantity
+
+	column UnitOfMeasurement
+		dataType: string
+		lineageTag: 5e8d310e-20d1-4578-8826-b6a6ba1378d8
+		sourceColumn: UnitOfMeasurement
+
+	column NetWeight
+		dataType: double
+		lineageTag: a9416e58-71b5-4adb-98b7-2103bb7ff27b
+		sourceColumn: NetWeight
+
+	column GrossWeight
+		dataType: double
+		lineageTag: ab940bdd-28de-4329-b55b-d4b293fed0ef
+		sourceColumn: GrossWeight
+
+	column DeliveryNo
+		dataType: string
+		lineageTag: ac4509ae-5758-4c52-90a4-2b00e6580873
+		sourceColumn: DeliveryNo
+
+	column SalesOrderNo
+		dataType: string
+		lineageTag: 2ecd7ca3-58d4-40b9-b305-4707fb3886d5
+		sourceColumn: SalesOrderNo
+
+	column DeliveryPosition
+		dataType: int64
+		lineageTag: 871866bf-33c4-491b-b08b-48f9c2eca4e3
+		sourceColumn: DeliveryPosition
+
+	column SalesOrderPosition
+		dataType: int64
+		lineageTag: 5fee7fec-1237-4517-b470-400cc096b596
+		sourceColumn: SalesOrderPosition
+
+	column Material
+		dataType: string
+		lineageTag: 06d2c41b-d56c-4ff8-91cb-78a844efdc3d
+		sourceColumn: Material
+
+	column MaterialDescription
+		dataType: string
+		lineageTag: 3eaa249e-4873-4dc4-ba87-e19dec5de797
+		sourceColumn: MaterialDescription
+
+	column Plant
+		dataType: string
+		lineageTag: d20b04cb-b78c-4a93-b0e5-8ab995faae00
+		sourceColumn: Plant
+
+	column InvoiceCreationDate
+		dataType: string
+		lineageTag: f7f611f2-ebc9-43a7-bda9-293df6256fc8
+		sourceColumn: InvoiceCreationDate
+
+	column InvoiceCreationTime
+		dataType: string
+		lineageTag: 854610c5-be8b-483f-97b9-913824bb32b3
+		sourceColumn: InvoiceCreationTime
+
+	column StorageLocationDepartment
+		dataType: string
+		lineageTag: a4243e48-5107-4b67-9865-19af8709b286
+		sourceColumn: StorageLocationDepartment
+
+	column InvoiceTypeBillingType
+		dataType: string
+		lineageTag: 51e6653f-93e9-403c-9a34-da1445446688
+		sourceColumn: InvoiceTypeBillingType
+
+	column InvoiceTypeII
+		dataType: string
+		lineageTag: 57616e79-b5cd-4d6a-adc8-f7032840b183
+		sourceColumn: InvoiceTypeII
+
+	column Currency
+		dataType: string
+		lineageTag: 666f1d9d-615b-4b0d-8c4a-d6333c48fb02
+		sourceColumn: Currency
+
+	column SalesOrganization
+		dataType: string
+		lineageTag: 478b4c85-d7c0-4a0a-98f3-1b4a4e676151
+		sourceColumn: SalesOrganization
+
+	column DistributionChannel
+		dataType: string
+		lineageTag: ba923113-65fb-459e-bfbb-6df3dd21033a
+		sourceColumn: DistributionChannel
+
+	column InvoiceDate
+		dataType: string
+		lineageTag: 2f6a7048-ae2b-43a2-b409-da4bdad38315
+		sourceColumn: InvoiceDate
+
+	column IncoTerm
+		dataType: string
+		lineageTag: 6a2b5d90-7499-4907-9996-0e666a259dfe
+		sourceColumn: IncoTerm
+
+	column IncoTermII
+		dataType: string
+		lineageTag: b92077ef-c3d7-422c-8060-f94cb89de07e
+		sourceColumn: IncoTermII
+
+	column Customer
+		dataType: string
+		lineageTag: 1eed91a3-c159-4f09-9664-a151c391698a
+		sourceColumn: Customer
+
+	column InvoiceReferencePricingNo
+		dataType: string
+		lineageTag: dcafe2f5-f2ce-4eb2-a13d-27e4d4dd371b
+		sourceColumn: InvoiceReferencePricingNo
+
+	column CurrencyExchangeRate
+		dataType: string
+		lineageTag: 795d9df2-6ed6-45e6-8bf1-02238f8a4a04
+		sourceColumn: CurrencyExchangeRate
+
+	column ValidityDate
+		dataType: string
+		lineageTag: d2cb5eaa-8238-4f8a-8bbe-46a137edc2ec
+		sourceColumn: ValidityDate
+
+	column BNDDT
+		dataType: string
+		lineageTag: f72d28e9-fe09-4fcc-9692-79711f5e1b15
+		sourceColumn: BNDDT
+
+	column MarketingRequirementDate
+		dataType: string
+		lineageTag: be2c89ef-f121-4beb-97af-b5bad96c41b5
+		sourceColumn: MarketingRequirementDate
+
+	column PlantRequirementDate
+		dataType: string
+		lineageTag: 3bceb61e-53bb-40b0-a8d8-aa5be90a9e83
+		sourceColumn: PlantRequirementDate
+
+	column SalesOrderType
+		dataType: string
+		lineageTag: 9ee25a4a-2a5e-436f-af8c-eeeb734e153c
+		sourceColumn: SalesOrderType
+
+	column Division
+		dataType: string
+		lineageTag: 82744394-6e8e-4fe5-b3c6-7a68a2049dfd
+		sourceColumn: Division
+
+	column PONo
+		dataType: string
+		lineageTag: e94e929a-2f93-4334-ad5f-2055b047a723
+		sourceColumn: PONo
+
+	column PODate
+		dataType: string
+		lineageTag: 3097f2d9-52af-480d-8b09-9fce57514f6b
+		sourceColumn: PODate
+
+	column ConsigneeCode
+		dataType: string
+		lineageTag: 3380b617-7554-46b6-a06e-a2287b0d897c
+		sourceColumn: ConsigneeCode
+
+	column LDStatus
+		dataType: string
+		lineageTag: e93b99b5-dcc1-4867-8582-0b7604fbca04
+		sourceColumn: LDStatus
+
+	column LDDate
+		dataType: string
+		lineageTag: b2f4fcbc-3475-45a0-a522-34a810a1f821
+		sourceColumn: LDDate
+
+	column LDCompletionDate
+		dataType: string
+		lineageTag: c4ad31e6-29fa-4bd5-a8ff-2c1cda1d4f3d
+		sourceColumn: LDCompletionDate
+
+	column EquipmentApplicationCode
+		dataType: string
+		lineageTag: 5861ccdf-434b-45dc-b2bc-7ae44438e021
+		sourceColumn: EquipmentApplicationCode
+
+	column Shop
+		dataType: string
+		lineageTag: 9aab774f-cf59-4eea-815a-8a9734c2ed61
+		sourceColumn: Shop
+
+	column EquipmentApplicationDescription
+		dataType: string
+		lineageTag: 4c67d652-09fe-435f-b1b4-bdd553b9af8b
+		sourceColumn: EquipmentApplicationDescription
+
+	column Land
+		dataType: string
+		lineageTag: 3dcad14c-6c7d-467f-9ad4-ab506ddc5519
+		sourceColumn: Land
+
+	column CustomerName
+		dataType: string
+		lineageTag: 7bb1e156-decf-4e9f-a71e-c1ece7996bec
+		sourceColumn: CustomerName
+
+	column Zone
+		dataType: string
+		lineageTag: 6b0e8b62-fa56-402a-a5df-4e7e5600743f
+		sourceColumn: Zone
+
+	column IRPDPosition
+		dataType: string
+		lineageTag: 2f4e0145-c654-46a6-9a60-0af864829489
+		sourceColumn: IRPDPosition
+
+	column IRPDStepNumber
+		dataType: string
+		lineageTag: 03cca282-a6cb-4766-a415-cd83530f16b6
+		sourceColumn: IRPDStepNumber
+
+	column IRPDCounter
+		dataType: string
+		lineageTag: 871f39bf-1470-4a4f-939d-aba8eac48580
+		sourceColumn: IRPDCounter
+
+	column IRPDConditionType
+		dataType: string
+		lineageTag: 3109187c-4a98-4b72-970c-f83ac9c0fcf3
+		sourceColumn: IRPDConditionType
+
+	column IRPDDate
+		dataType: string
+		lineageTag: 76fd41b6-5b74-4aa6-b607-09bc84e670cd
+		sourceColumn: IRPDDate
+
+	column IRPDConditionBaseValue
+		dataType: string
+		lineageTag: b3192215-0cce-49c6-8da2-330bb6c88e7e
+		sourceColumn: IRPDConditionBaseValue
+
+	column IRPDStatus
+		dataType: string
+		lineageTag: 120118be-8900-4d75-ba7a-e83309cbdc42
+		sourceColumn: IRPDStatus
+
+	column StorageDepartmentDescription
+		dataType: string
+		lineageTag: 87ab8bfd-098a-456a-a584-84626adbdbbf
+		sourceColumn: StorageDepartmentDescription
+
+	column CessValue
+		dataType: string
+		lineageTag: 7ed0a048-c682-4dda-9d20-0b87e3cf823f
+		sourceColumn: CessValue
+
+	column CentralSalesTax
+		dataType: string
+		lineageTag: cedad0c1-7998-49ab-8377-109329ce7f27
+		sourceColumn: CentralSalesTax
+
+	column EntryTaxOdiUP
+		dataType: string
+		lineageTag: 146eeb29-aea5-463a-a8e8-e85a11f3bb85
+		sourceColumn: EntryTaxOdiUP
+
+	column ExciseDuty
+		dataType: int64
+		lineageTag: 2b02fc94-9039-45ad-bbe8-2996fbe8c6c6
+		sourceColumn: ExciseDuty
+
+	column GodownCVD
+		dataType: int64
+		lineageTag: 212c4e9e-5588-4979-9bc7-1ecaf4fadba8
+		sourceColumn: GodownCVD
+
+	column FreightQty2
+		dataType: double
+		lineageTag: 23f59844-3044-46d7-a24b-1c74de31d553
+		sourceColumn: FreightQty2
+
+	column FreightLumpsum2
+		dataType: double
+		lineageTag: 45d0ab66-5a14-4976-86ec-6ffeb16d1958
+		sourceColumn: FreightLumpsum2
+
+	column FreightMT1
+		dataType: int64
+		lineageTag: ebabcc30-1681-4095-909b-42ffbb72c62d
+		sourceColumn: FreightMT1
+
+	column FreightMT2
+		dataType: int64
+		lineageTag: 4c1af467-4b06-4ec7-b5b2-f25d332abcae
+		sourceColumn: FreightMT2
+
+	column FreightQty1
+		dataType: int64
+		lineageTag: 86422fad-fe9e-42dd-8653-d7b73d0075e2
+		sourceColumn: FreightQty1
+
+	column FreightLumpsum1
+		dataType: int64
+		lineageTag: 48d0e0ba-2254-4682-ac9f-95a16162598d
+		sourceColumn: FreightLumpsum1
+
+	column PackingLumpsum
+		dataType: int64
+		lineageTag: 65496bbe-8f38-4cc6-80d8-865f7acd6beb
+		sourceColumn: PackingLumpsum
+
+	column PackingChargeQty
+		dataType: double
+		lineageTag: 8afc1601-654a-4564-b271-583d0a5a0505
+		sourceColumn: PackingChargeQty
+
+	column PackingChargeMT
+		dataType: int64
+		lineageTag: 02b33c75-8db3-47ae-84fa-650ed8cd07e6
+		sourceColumn: PackingChargeMT
+
+	column HigherEduCess
+		dataType: int64
+		lineageTag: 3f2696ee-32da-4fbc-84f8-f106a547417d
+		sourceColumn: HigherEduCess
+
+	column ServiceTax
+		dataType: int64
+		lineageTag: add725ab-bae6-4280-acdf-e3ed3c7f1d5d
+		sourceColumn: ServiceTax
+
+	column EduCessOnServiceTax
+		dataType: int64
+		lineageTag: 3c7518d0-bf74-4818-a507-12e0e1add712
+		sourceColumn: EduCessOnServiceTax
+
+	column HighEduCessOnServiceTax
+		dataType: int64
+		lineageTag: 21dbfcc2-646f-439a-8aaa-9f0a619d8686
+		sourceColumn: HighEduCessOnServiceTax
+
+	column Surcharge
+		dataType: int64
+		lineageTag: 56c8821b-0085-4a9b-a8ab-46f896ddcd26
+		sourceColumn: Surcharge
+
+	column TaxColSource
+		dataType: int64
+		lineageTag: a6765caa-3902-4f62-a4ea-d95ca6c2ce75
+		sourceColumn: TaxColSource
+
+	column VAT
+		dataType: int64
+		lineageTag: 1f8cf0b2-ab42-4f33-9542-17eb8b64a89d
+		sourceColumn: VAT
+
+	column VAT1
+		dataType: int64
+		lineageTag: a8d1025d-9446-4adc-9304-fc300f858fa7
+		sourceColumn: VAT1
+
+	column SBCess
+		dataType: int64
+		lineageTag: 5c563908-995d-479b-9149-ab884d5ecc21
+		sourceColumn: SBCess
+
+	column KKCess
+		dataType: double
+		lineageTag: 6f16ed76-f6b3-41d7-9816-6e713390707e
+		sourceColumn: KKCess
+
+	column Retail
+		dataType: double
+		lineageTag: a323e741-e2bf-4fc9-8145-a98e33ab03ab
+		sourceColumn: Retail
+
+	column BasicPrice
+		dataType: double
+		lineageTag: 0bc92a20-f31e-409a-b5be-245ebe3aa2ad
+		sourceColumn: BasicPrice
+
+	column PriceInclOfTaxes
+		dataType: double
+		lineageTag: 1e8c6abc-2e1a-45aa-a84d-36126038400b
+		sourceColumn: PriceInclOfTaxes
+
+	column ActualSales
+		dataType: double
+		lineageTag: 6502390b-4506-4a8c-bf96-ada788c7d640
+		sourceColumn: ActualSales
+
+	column GodownRevenue
+		dataType: double
+		lineageTag: 327d4107-757b-4375-b273-c210d98d47dd
+		sourceColumn: GodownRevenue
+
+	column RevenueBasicDiscount
+		dataType: double
+		lineageTag: 80e6dde2-2087-4cba-98f0-7b1cf4c94d10
+		sourceColumn: RevenueBasicDiscount
+
+	column StockistDiscNew
+		dataType: double
+		lineageTag: 48b05e00-7fec-4b34-a7ab-8331a291bf38
+		sourceColumn: StockistDiscNew
+
+	column StockistDisc
+		dataType: double
+		lineageTag: 51e09178-dc96-4516-866a-2133b57055d4
+		sourceColumn: StockistDisc
+
+	column ForeignCurrencyValue
+		dataType: double
+		lineageTag: c0ab2e1d-e0c7-4f6f-9104-c315b9a18b25
+		sourceColumn: ForeignCurrencyValue
+
+	column InvBasicPrice
+		dataType: double
+		lineageTag: e9d61364-9bd0-40c0-9f19-8c93d3bec66b
+		sourceColumn: InvBasicPrice
+
+	column Discount
+		dataType: double
+		lineageTag: 81ddacdf-9e03-42b7-8b4a-22c65e422da6
+		sourceColumn: Discount
+
+	column Discount1
+		dataType: double
+		lineageTag: 86822147-ed5f-4daa-a4d9-da77d432c8dd
+		sourceColumn: Discount1
+
+	column StateGST
+		dataType: double
+		lineageTag: 79c7070a-9ed2-4198-ae98-b2fbd21b6b37
+		sourceColumn: StateGST
+
+	column CentralGST
+		dataType: double
+		lineageTag: b9d9ac7d-a2bf-4f23-8dd9-e9f92ce46338
+		sourceColumn: CentralGST
+
+	column IntegratedGST
+		dataType: double
+		lineageTag: 5c261db3-ac10-4fe8-91be-162ecdd9d0b4
+		sourceColumn: IntegratedGST
+
+	column MineralRoyalty
+		dataType: double
+		lineageTag: 580b6785-f1c9-4fc7-bbfa-58052369fd4c
+		sourceColumn: MineralRoyalty
+
+	column DistMineralFund
+		dataType: double
+		lineageTag: c4e96afc-6529-4801-8d43-254d3f0f10c3
+		sourceColumn: DistMineralFund
+
+	column DeemedExportGST
+		dataType: double
+		lineageTag: 6a2e1e1a-33a8-46b7-98eb-73c505b8f2af
+		sourceColumn: DeemedExportGST
+
+	column DeemedExportCentralGST
+		dataType: int64
+		lineageTag: 576eaeb8-5ef9-4dd7-a54d-58476374e16b
+		sourceColumn: DeemedExportCentralGST
+
+	column DeemedExportStateGST
+		dataType: int64
+		lineageTag: e0417d06-289a-40e9-85ba-13d0656aa926
+		sourceColumn: DeemedExportStateGST
+
+	column Penalty
+		dataType: int64
+		lineageTag: c1283303-5b1f-439d-a4d1-bfbfc32a0d25
+		sourceColumn: Penalty
+
+	column SalesOrderBasicPrice
+		dataType: double
+		lineageTag: fcd31afd-7083-4a70-a062-62fa1102116a
+		sourceColumn: SalesOrderBasicPrice
+
+	column BasicPriceNTO
+		dataType: double
+		lineageTag: 17b2397e-9418-4799-a64d-95c0332638df
+		sourceColumn: BasicPriceNTO
+
+	column FreightExp
+		dataType: double
+		lineageTag: 6e3390a9-3722-4d15-ba8b-1a9ed6c5fbfa
+		sourceColumn: FreightExp
+
+	column InspeLumpExp
+		dataType: double
+		lineageTag: 3a88ade2-d5e2-4a53-be38-3c972bb4ae74
+		sourceColumn: InspeLumpExp
+
+	column TotalPriceExp
+		dataType: double
+		lineageTag: ae21da55-3a96-41b6-93fc-04e343808418
+		sourceColumn: TotalPriceExp
+
+	column TCSAmount
+		dataType: double
+		lineageTag: 80daf1ee-64e9-4fcf-bc88-c19553efe74d
+		sourceColumn: TCSAmount
+
+	column CountryName
+		dataType: string
+		lineageTag: ebafa6fd-d758-4957-87dd-8563fd345c20
+		sourceColumn: CountryName
+
+	column MaterialGroup
+		dataType: string
+		lineageTag: d4a84216-ab8b-4cff-90d3-3aa10e3cf540
+		sourceColumn: MaterialGroup
+
+	column Fcode
+		dataType: string
+		lineageTag: 68311f3c-93b8-4eed-8d9d-540ec3c99a04
+		sourceColumn: Fcode
+
+	column ExternalMaterialGroup
+		dataType: string
+		lineageTag: bc253de7-8b56-4f21-b06f-7c2c3daa69e7
+		sourceColumn: ExternalMaterialGroup
+
+	column CancelledInvoice
+		dataType: string
+		lineageTag: eb7ee41e-d0c9-4677-9617-7f9b7f7cd9a3
+		sourceColumn: CancelledInvoice
+
+	column InvoiceStatusNotEqualE
+		dataType: string
+		lineageTag: d77399ce-7aba-443d-9d07-fc853a05abe8
+		sourceColumn: InvoiceStatusNotEqualE
+
+	column InvoiceStatusNotEqualX
+		dataType: string
+		lineageTag: 7377d298-214e-4950-a470-960c8ce82c6a
+		sourceColumn: InvoiceStatusNotEqualX
+
+	column Sales
+		dataType: string
+		lineageTag: 5136ccb9-f3b5-478c-b13a-f7f22891b6ba
+		sourceColumn: Sales
+
+	column Amount
+		dataType: string
+		lineageTag: ad1811ab-b611-4c2f-973e-b1fb415faacb
+		sourceColumn: Amount
+
+	column NetAmount
+		dataType: string
+		lineageTag: 7621d19a-6f65-47b5-9811-5f6a0e60deec
+		sourceColumn: NetAmount
+
+	column DiscountValue
+		dataType: string
+		lineageTag: 2e166098-33d8-4ce1-a5a8-edc68ca53c03
+		sourceColumn: DiscountValue
+
+	column TotalQuantity
+		dataType: double
+		lineageTag: f84b9019-91c2-4535-a428-4c1af16f4c1f
+		sourceColumn: TotalQuantity
+
+	column Verticals
+		dataType: string
+		lineageTag: 3e6587f2-23dc-48c5-a001-61aeed573edd
+		sourceColumn: Verticals
+
+	column SubZone
+		dataType: string
+		lineageTag: 35a65231-1d3b-446c-9b0a-d699a1de422e
+		sourceColumn: SubZone
+
+	column USD
+		dataType: string
+		lineageTag: 933deee0-65e3-4227-b4a0-5911f2c7b5f5
+		sourceColumn: USD
+
+	column EUR
+		dataType: string
+		lineageTag: b2f7a5bb-3ae6-46fc-b960-2595164be0d7
+		sourceColumn: EUR
+
+	column JPY
+		dataType: string
+		lineageTag: 677d8d2d-3d18-4c09-8951-842b8bad0ddf
+		sourceColumn: JPY
+
+	column Territory
+		dataType: string
+		lineageTag: 2a93ea58-6b07-42b5-8c54-85d5467494d2
+		sourceColumn: Territory
+
+	column InvoiceDateForCalendar
+		dataType: string
+		lineageTag: 3a7acdf5-157d-4035-a6c1-f5f74e1e709c
+		sourceColumn: InvoiceDateForCalendar
+
+	column Billing_Time
+		dataType: string
+		lineageTag: 4ffe0b0c-ad10-4afd-862d-783e8acb2ce8
+		sourceColumn: Billing_Time
+
+	column Billing_Time_Within_Plant
+		dataType: string
+		lineageTag: a422f253-89cb-4cd0-947d-d09878b2791d
+		sourceColumn: Billing_Time_Within_Plant
+
+	column CustomerGroupName
+		dataType: string
+		lineageTag: 98feac44-14ca-4d3a-a9f7-1c20ca4eb973
+		sourceColumn: CustomerGroupName
+
+	partition sales = entity
+		mode: directLake
+		source
+			entityName: sales
+			schemaName: dbo
+			expressionSource: 'DirectLake - silver_data'
+
+		annotation ONT_WorkspaceId = a740cbb5-cee1-41d2-bd69-e6c4571cd003
+
+		annotation ONT_ItemId = f26cf26d-61b0-4fb0-80c8-52c15bef8330
+
+		annotation ONT_ItemKind = Warehouse
+
+		annotation ONT_ItemName = silver_data
+
+		annotation ONT_WorkspaceName = intech_fabric_hackathon
+
+		annotation ONT_SqlEndpoint = 42b76ifuwx7eveo4holctsljl4-wxfubj7bz3jedplj43cfohgqam.datawarehouse.fabric.microsoft.com
+
+		annotation ONT_SqlDatabase = silver_data
+
+		annotation ONT_PinnedAtUtc = 2026-11-04T11:44:57.733Z
+

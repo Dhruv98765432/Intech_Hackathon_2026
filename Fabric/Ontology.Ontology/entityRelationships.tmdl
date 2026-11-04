@@ -1,0 +1,30 @@
+entityRelationship 'contributes to'
+	label: generates
+	lineageTag: ba63cea8-c2b2-4acd-9be5-11d4d79d3e55
+	fromEntity: sales
+	toEntity: revenue
+
+entityRelationship targets
+	label: targets
+	lineageTag: 8412641f-f02a-4c0b-b3ae-a9b9761b22b9
+	fromEntity: sales_plan
+	toEntity: customer_group
+
+entityRelationship belongs
+	label: belongs
+	lineageTag: 7803f60c-7deb-41ca-9f14-1fa21e2828dd
+	fromEntity: sales
+	toEntity: customer_group
+
+entityRelationship targets_2
+	label: targets
+	lineageTag: d5b981f3-a2ea-4c45-a560-2ab007015ae2
+	fromEntity: sales_plan
+	toEntity: revenue
+
+entityRelationship 'measured against'
+	label: measured against
+	lineageTag: 38329d16-02f5-46bf-b8ae-f755de99f18f
+	fromEntity: sales
+	toEntity: sales_plan
+
