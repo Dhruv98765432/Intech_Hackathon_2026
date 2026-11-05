@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/fewShots/1.0.0/schema.json",
+  "fewShots": [
+    {
+      "id": "ex-01",
+      "question": "Total sales amount and TotalQuantity for FY 2023-24 (FY starting 01-04-2023 to 31-03-2024).",
+      "query": "SELECT\n  SUM(Amount) AS TotalSalesAmount,\n  SUM(TotalQuantity) AS TotalQuantity\nFROM sales\nWHERE InvoiceDate >= DATEFROMPARTS(2023, 4, 1)\n  AND InvoiceDate < DATEFROMPARTS(2024, 4, 1);"
+    },
+    {
+      "id": "ex-02",
+      "question": "Top 10 materials by sales amount in FY 2023-24, including material description.",
+      "query": "SELECT TOP (10)\n  Material,\n  MaterialDescription,\n  SUM(Amount) AS TotalSalesAmount\nFROM sales\nWHERE InvoiceDate >= DATEFROMPARTS(2023, 4, 1)\n  AND InvoiceDate < DATEFROMPARTS(2024, 4, 1)\nGROUP BY Material, MaterialDescription\nORDER BY TotalSalesAmount DESC;"
+    },
+    {
+      "id": "ex-03",
+      "question": "Monthly sales amount trend for FY 2022-23 in April-to-March sequence.",
+      "query": "SELECT\n  CASE WHEN MONTH(InvoiceDate) >= 4 THEN YEAR(InvoiceDate) ELSE YEAR(InvoiceDate) - 1 END AS FinancialYearStart,\n  CASE WHEN MONTH(InvoiceDate) >= 4 THEN MONTH(InvoiceDate) - 3 ELSE MONTH(InvoiceDate) + 9 END AS FinancialMonth,\n  DATENAME(month, InvoiceDate) AS MonthName,\n  SUM(Amount) AS TotalSalesAmount\nFROM sales\nWHERE InvoiceDate >= DATEFROMPARTS(2022, 4, 1)\n  AND InvoiceDate < DATEFROMPARTS(2023, 4, 1)\nGROUP BY\n  CASE WHEN MONTH(InvoiceDate) >= 4 THEN YEAR(InvoiceDate) ELSE YEAR(InvoiceDate) - 1 END,\n  CASE WHEN MONTH(InvoiceDate) >= 4 THEN MONTH(InvoiceDate) - 3 ELSE MONTH(InvoiceDate) + 9 END,\n  DATENAME(month, InvoiceDate)\nORDER BY FinancialMonth;"
+    },
+    {
+      "id": "ex-04",
+      "question": "Top 10 customers by TotalQuantity in the last 12 months.",
+      "query": "SELECT TOP (10)\n  Customer,\n  CustomerName,\n  SUM(TotalQuantity) AS TotalQuantity\nFROM sales\nWHERE InvoiceDate >= DATEADD(month, -12, CAST(GETDATE() AS date))\n  AND InvoiceDate < CAST(GETDATE() AS date)\nGROUP BY Customer, CustomerName\nORDER BY TotalQuantity DESC;"
+    },
+    {
+      "id": "ex-05",
+      "question": "Count of cancelled invoices in FY 2023-24.",
+      "query": "SELECT\n  COUNT(DISTINCT InvoiceNo) AS CancelledInvoiceCount\nFROM sales\nWHERE CancelledInvoice IN ('Y', '1', 'Yes')\n  AND InvoiceDate >= DATEFROMPARTS(2023, 4, 1)\n  AND InvoiceDate < DATEFROMPARTS(2024, 4, 1);"
+    },
+    {
+      "id": "ex-06",
+      "question": "Top 20 materials by average sales amount per unit, excluding rows with zero or missing quantity.",
+      "query": "SELECT TOP (20)\n  Material,\n  MaterialDescription,\n  SUM(Amount) / NULLIF(SUM(Quantity), 0) AS SalesAmountPerUnit\nFROM sales\nWHERE Quantity IS NOT NULL\nGROUP BY Material, MaterialDescription\nHAVING SUM(Quantity) <> 0\nORDER BY SalesAmountPerUnit DESC;"
+    },
+    {
+      "id": "ex-07",
+      "question": "Sales amount by country for FY 2023-24.",
+      "query": "SELECT\n  CountryName,\n  SUM(Amount) AS TotalSalesAmount\nFROM sales\nWHERE InvoiceDate >= DATEFROMPARTS(2023, 4, 1)\n  AND InvoiceDate < DATEFROMPARTS(2024, 4, 1)\nGROUP BY CountryName\nORDER BY TotalSalesAmount DESC;"
+    },
+    {
+      "id": "ex-08",
+      "question": "Invoice counts by sales organization and distribution channel in FY 2023-24, showing only groups with more than 100 invoices.",
+      "query": "SELECT\n  SalesOrganization,\n  DistributionChannel,\n  COUNT(DISTINCT InvoiceNo) AS InvoiceCount\nFROM sales\nWHERE InvoiceDate >= DATEFROMPARTS(2023, 4, 1)\n  AND InvoiceDate < DATEFROMPARTS(2024, 4, 1)\nGROUP BY SalesOrganization, DistributionChannel\nHAVING COUNT(DISTINCT InvoiceNo) > 100\nORDER BY InvoiceCount DESC;"
+    },
+    {
+      "id": "ex-09",
+      "question": "Most recent 20 invoices with date, customer, and sales amount.",
+      "query": "SELECT TOP (20)\n  InvoiceNo,\n  InvoiceDate,\n  Customer,\n  CustomerName,\n  Amount\nFROM sales\nORDER BY InvoiceDate DESC;"
+    },
+    {
+      "id": "ex-10",
+      "question": "Find invoices with missing invoice dates.",
+      "query": "SELECT\n  InvoiceNo,\n  InvoiceDate,\n  Customer,\n  CustomerName\nFROM sales\nWHERE InvoiceDate IS NULL;"
+    },
+    {
+      "id": "ex-11",
+      "question": "Material group contribution to total sales amount for FY 2023-24, including percentage of total.",
+      "query": "SELECT\n  MaterialGroup,\n  SUM(Amount) AS MaterialGroupSalesAmount,\n  SUM(Amount) / NULLIF(SUM(SUM(Amount)) OVER (), 0) * 100.0 AS PercentOfTotalSalesAmount\nFROM sales\nWHERE InvoiceDate >= DATEFROMPARTS(2023, 4, 1)\n  AND InvoiceDate < DATEFROMPARTS(2024, 4, 1)\nGROUP BY MaterialGroup\nORDER BY MaterialGroupSalesAmount DESC;"
+    },
+    {
+      "id": "ex-12",
+      "question": "Top 5 plants by sales amount for each financial month in FY 2023-24.",
+      "query": "WITH MonthlyPlantSales AS (\n  SELECT\n    CASE WHEN MONTH(InvoiceDate) >= 4 THEN YEAR(InvoiceDate) ELSE YEAR(InvoiceDate) - 1 END AS FinancialYearStart,\n    CASE WHEN MONTH(InvoiceDate) >= 4 THEN MONTH(InvoiceDate) - 3 ELSE MONTH(InvoiceDate) + 9 END AS FinancialMonth,\n    Plant,\n    SUM(Amount) AS PlantSalesAmount\n  FROM sales\n  WHERE InvoiceDate >= DATEFROMPARTS(2023, 4, 1)\n    AND InvoiceDate < DATEFROMPARTS(2024, 4, 1)\n  GROUP BY\n    CASE WHEN MONTH(InvoiceDate) >= 4 THEN YEAR(InvoiceDate) ELSE YEAR(InvoiceDate) - 1 END,\n    CASE WHEN MONTH(InvoiceDate) >= 4 THEN MONTH(InvoiceDate) - 3 ELSE MONTH(InvoiceDate) + 9 END,\n    Plant\n), RankedPlants AS (\n  SELECT\n    FinancialYearStart,\n    FinancialMonth,\n    Plant,\n    PlantSalesAmount,\n    ROW_NUMBER() OVER (\n      PARTITION BY FinancialYearStart, FinancialMonth\n      ORDER BY PlantSalesAmount DESC\n    ) AS PlantRank\n  FROM MonthlyPlantSales\n)\nSELECT\n  FinancialYearStart,\n  FinancialMonth,\n  Plant,\n  PlantSalesAmount\nFROM RankedPlants\nWHERE PlantRank <= 5\nORDER BY FinancialYearStart, FinancialMonth, PlantSalesAmount DESC;"
+    },
+    {
+      "id": "ex-13",
+      "question": "Compare total sales amount and net amount by financial year for all available years.",
+      "query": "SELECT\n  CASE WHEN MONTH(InvoiceDate) >= 4 THEN YEAR(InvoiceDate) ELSE YEAR(InvoiceDate) - 1 END AS FinancialYearStart,\n  SUM(Amount) AS TotalSalesAmount,\n  SUM(NetAmount) AS TotalNetAmount,\n  SUM(Amount) - SUM(NetAmount) AS AmountLessNetAmount\nFROM sales\nWHERE InvoiceDate IS NOT NULL\nGROUP BY CASE WHEN MONTH(InvoiceDate) >= 4 THEN YEAR(InvoiceDate) ELSE YEAR(InvoiceDate) - 1 END\nORDER BY FinancialYearStart;"
+    },
+    {
+      "id": "ex-14",
+      "question": "Average Billing_Time_Within_Plant by shop, converting valid numeric values only.",
+      "query": "SELECT\n  Shop,\n  AVG(TRY_CONVERT(float, Billing_Time_Within_Plant)) AS AverageBillingTimeWithinPlant\nFROM sales\nGROUP BY Shop\nHAVING AVG(TRY_CONVERT(float, Billing_Time_Within_Plant)) IS NOT NULL\nORDER BY AverageBillingTimeWithinPlant DESC;"
+    },
+    {
+      "id": "ex-15",
+      "question": "Total DiscountValue by external material group for FY 2023-24.",
+      "query": "SELECT\n  ExternalMaterialGroup,\n  SUM(DiscountValue) AS TotalDiscountValue\nFROM sales\nWHERE InvoiceDate >= DATEFROMPARTS(2023, 4, 1)\n  AND InvoiceDate < DATEFROMPARTS(2024, 4, 1)\nGROUP BY ExternalMaterialGroup\nORDER BY TotalDiscountValue DESC;"
+    }
+  ]
+}

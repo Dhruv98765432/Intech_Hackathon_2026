@@ -23,96 +23,6 @@
 # CELL ********************
 
 from pyspark.sql import functions as F
-
-# ============================================================
-# 1. CONFIGURATION: ADD DATE COLUMNS FOR EACH TABLE
-# ============================================================
-
-table_date_columns = {
-    "revenue": [
-        "Invoice_Creation_Date",
-        "PO_Date",
-    ],
-
-    "sales": [
-        "InvoiceCreationDate",
-        "InvoiceDate",
-        "PODate",
-        "MarketingRequirementDate",
-        "PlantRequirementDate",
-        "InvoiceDateForCalendar",
-    ]
-}
-
-# ============================================================
-# 2. PROCESS TABLES
-# ============================================================
-
-for table_name, date_columns in table_date_columns.items():
-
-    print(f"\nProcessing table: {table_name}")
-
-    try:
-        # Read existing Lakehouse Delta table
-        df = spark.read.table(table_name)
-
-        # Check available columns
-        existing_columns = df.columns
-
-        # Convert specified columns to DATE
-        for column_name in date_columns:
-
-            if column_name in existing_columns:
-
-                df = df.withColumn(
-                    column_name,
-                    F.to_date(F.col(column_name))
-                )
-
-                print(f"  Converted: {column_name} -> DATE")
-
-            else:
-                print(f"  WARNING: Column '{column_name}' not found.")
-
-        # ====================================================
-        # 3. OVERWRITE EXISTING LAKEHOUSE TABLE
-        # ====================================================
-
-        (
-            df.write
-            .format("delta")
-            .mode("overwrite")
-            .option("overwriteSchema", "true")
-            .saveAsTable(table_name)
-        )
-
-        print(f"SUCCESS: {table_name} updated successfully.")
-
-        # ====================================================
-        # 4. VALIDATE UPDATED SCHEMA
-        # ====================================================
-
-        print(f"\nUpdated schema for {table_name}:")
-        spark.read.table(table_name).printSchema()
-
-    except Exception as e:
-
-        print(f"ERROR processing {table_name}: {str(e)}")
-
-print("\nAll table processing completed.")
-
-please upload to lakehouse
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
-
-# CELL ********************
-
-from pyspark.sql import functions as F
 from pyspark.sql.types import *
 import pandas as pd
 import numpy as np
@@ -464,6 +374,106 @@ else:
 display(final_df.limit(10))
 
 print("\nETL Completed Successfully!")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+from pyspark.sql import functions as F
+
+# ============================================================
+# 1. CONFIGURATION: ADD DATE COLUMNS FOR EACH TABLE
+# ============================================================
+
+table_date_columns = {
+    "revenue": [
+        "Invoice_Creation_Date",
+        "PO_Date",
+    ],
+
+    "sales": [
+        "InvoiceCreationDate",
+        "InvoiceDate",
+        "PODate",
+        "MarketingRequirementDate",
+        "PlantRequirementDate",
+        "InvoiceDateForCalendar",
+    ]
+}
+
+# ============================================================
+# 2. PROCESS TABLES
+# ============================================================
+
+for table_name, date_columns in table_date_columns.items():
+
+    print(f"\nProcessing table: {table_name}")
+
+    try:
+        # Read existing Lakehouse Delta table
+        df = spark.read.table(table_name)
+
+        # Check available columns
+        existing_columns = df.columns
+
+        # Convert specified columns to DATE
+        for column_name in date_columns:
+
+            if column_name in existing_columns:
+
+                df = df.withColumn(
+                    column_name,
+                    F.to_date(F.col(column_name))
+                )
+
+                print(f"  Converted: {column_name} -> DATE")
+
+            else:
+                print(f"  WARNING: Column '{column_name}' not found.")
+
+        # ====================================================
+        # 3. OVERWRITE EXISTING LAKEHOUSE TABLE
+        # ====================================================
+
+        (
+            df.write
+            .format("delta")
+            .mode("overwrite")
+            .option("overwriteSchema", "true")
+            .saveAsTable(table_name)
+        )
+
+        print(f"SUCCESS: {table_name} updated successfully.")
+
+        # ====================================================
+        # 4. VALIDATE UPDATED SCHEMA
+        # ====================================================
+
+        print(f"\nUpdated schema for {table_name}:")
+        spark.read.table(table_name).printSchema()
+
+    except Exception as e:
+
+        print(f"ERROR processing {table_name}: {str(e)}")
+
+print("\nAll table processing completed.")
+
+please upload to lakehouse
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
 
 # METADATA ********************
 

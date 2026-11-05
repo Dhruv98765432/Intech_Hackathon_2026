@@ -1,0 +1,1785 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "5bef8330-52c1-80c8-4fb0-61b0f26cf26d",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": "FINANCIAL YEAR IS THE DEFAULT REPORTING CALENDAR.\r\nA year means the financial year STARTING in that year:\r\n2022 = 01-04-2022 to 31-03-2023.\r\n2023 = 01-04-2023 to 31-03-2024.\r\nApply this interpretation to every year unless calendar year is explicitly requested.\r\n\r\nHistorical years use complete April-March periods.\r\nCurrent-year actuals use April through the reporting cutoff.\r\nCurrent-year comparisons use equivalent elapsed financial-year periods.\r\n\r\nFilter underlying dates from 1 April, not 1 January.\r\nNever filter financial years using YEAR(InvoiceDate) alone.\r\nFinancialYearStart = YEAR(DATEADD(month,-3,InvoiceDate)).\r\nFinancialMonth = MONTH(DATEADD(month,-3,InvoiceDate)).\r\nGroup by FinancialYearStart and FinancialMonth.\r\nSort monthly results by FinancialMonth: April first, March last.\r\nUse financial-year labels in answers, table columns, and chart series.",
+  "displayName": "silver_data",
+  "type": "data_warehouse",
+  "userDescription": null,
+  "metadata": null,
+  "elements": [
+    {
+      "id": "9178e8c8-c462-4b6c-b7fb-a72301078c5d",
+      "is_selected": false,
+      "display_name": "Schemas",
+      "type": "schema_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "1a91b56e-a2a3-4f5e-9bee-3047af35b716",
+          "is_selected": false,
+          "display_name": "dbo",
+          "type": "warehouse_tables.schema",
+          "description": null,
+          "children": [
+            {
+              "id": "db264101-0caf-4cc7-9382-80f0b8fc0b0e",
+              "is_selected": false,
+              "display_name": "Tables",
+              "type": "table_grouping",
+              "description": null,
+              "children": [
+                {
+                  "id": "d462036b-7d6b-4b1a-9a0a-793a90e53692",
+                  "is_selected": false,
+                  "display_name": "sales_plan",
+                  "type": "warehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "31c08e6f-3cab-485c-a1b5-8a7b4fe14c40",
+                      "is_selected": true,
+                      "display_name": "ABP_FREIGHT",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "20bfc491-d7be-4a3c-96f9-3b002a0d6da9",
+                      "is_selected": true,
+                      "display_name": "ABP_REVENUE",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "d5f3c5a3-78b1-4d27-aee4-a348906d3e91",
+                      "is_selected": true,
+                      "display_name": "ABP_TONNAGE",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "2768d2d7-3050-4bc4-8420-d2bbba0e46e2",
+                      "is_selected": true,
+                      "display_name": "AREA_HEAD",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "f09e266d-a149-4bbd-8459-b03d6988b996",
+                      "is_selected": true,
+                      "display_name": "CUS_GRP",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "dcd968f1-8549-4f49-a74c-fff81b558fbc",
+                      "is_selected": true,
+                      "display_name": "CUS_SUBGRP",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "2a2b6a4b-fb91-465b-8fc5-e336397c0e86",
+                      "is_selected": true,
+                      "display_name": "CUST_NAME",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "01c13c1d-cb0d-405e-a4a3-cbac249b3f64",
+                      "is_selected": true,
+                      "display_name": "END_DATE",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "fc50527a-6c0a-49a2-8237-4ca6e28e5bf3",
+                      "is_selected": true,
+                      "display_name": "ERDAT",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "bfa00861-89f1-4c8a-8824-3c818a2c0dde",
+                      "is_selected": true,
+                      "display_name": "ERNAM",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "209f309d-2586-41d9-bc68-c4fbe6257ce7",
+                      "is_selected": true,
+                      "display_name": "ERZET",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "9ac33324-6673-427a-bcac-3ee53505c998",
+                      "is_selected": true,
+                      "display_name": "INCOTERM",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "c05ab560-2141-4c6f-8227-cdd6a0cd3f25",
+                      "is_selected": true,
+                      "display_name": "KUNNR",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e57d2fce-14f8-44c0-8909-4b6a6a85d33e",
+                      "is_selected": true,
+                      "display_name": "PLANNED_FREIGHT",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "620cfdab-e08c-4322-9488-c100242d382c",
+                      "is_selected": true,
+                      "display_name": "PLANNED_REVENUE",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "52006c0f-055f-4845-9df1-d8499baae594",
+                      "is_selected": true,
+                      "display_name": "PLANNED_TONNAGE",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "34f98ec8-ce60-4685-b3ac-254887e3e780",
+                      "is_selected": true,
+                      "display_name": "SALES_KAM",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "304c6ca3-9018-43aa-9dcb-7f8c2b647c80",
+                      "is_selected": true,
+                      "display_name": "SALES_TYPE",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "5e6ec796-4b34-41cf-9e78-0414e257153c",
+                      "is_selected": true,
+                      "display_name": "SL_NO",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "713f82bc-a2a1-40bc-bbd9-ecb99bd786d2",
+                      "is_selected": true,
+                      "display_name": "SNOP_PRODUCT_GRP",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "11c809fb-b9f5-4b6c-a0de-f9f587203091",
+                      "is_selected": true,
+                      "display_name": "START_DATE",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e4a6ff95-8e2f-44fb-88d0-2ecc86dcd038",
+                      "is_selected": true,
+                      "display_name": "PlanDateForCalendar",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "3a70bf02-758a-4712-abd1-17177be8a995",
+                  "is_selected": false,
+                  "display_name": "customer_group",
+                  "type": "warehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "b35a049e-82ac-4608-99f1-16b806caaa8e",
+                      "is_selected": true,
+                      "display_name": "GROUP",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "928a6214-abd4-48c9-a708-5e7a138e6db0",
+                      "is_selected": true,
+                      "display_name": "NAME",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e6f010b2-fd78-4ab5-a3cc-51bafd9e5e7e",
+                      "is_selected": true,
+                      "display_name": "GroupCount",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "344de41e-9d69-4c2a-8291-84b785e26d1d",
+                  "is_selected": true,
+                  "display_name": "sales",
+                  "type": "warehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "ea4304b8-0880-4565-b628-78c1a7e4a1e6",
+                      "is_selected": true,
+                      "display_name": "InvoiceNo",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "8a5a42a9-7d3c-445c-b5ba-ed88dbd95c34",
+                      "is_selected": true,
+                      "display_name": "InvoicePosition",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "f737d0a9-7686-4d3a-977d-e5486d51cff6",
+                      "is_selected": true,
+                      "display_name": "Quantity",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "019b390b-44fc-4c29-9944-671ffef97b1e",
+                      "is_selected": true,
+                      "display_name": "UnitOfMeasurement",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "1542574d-7978-4edd-abf0-6bc15f7c3153",
+                      "is_selected": true,
+                      "display_name": "NetWeight",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "6640dcd5-56ba-4eb3-ba5a-0411216239c1",
+                      "is_selected": true,
+                      "display_name": "GrossWeight",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "ca0e1441-3752-4afc-8f48-bb3c09990ef9",
+                      "is_selected": true,
+                      "display_name": "DeliveryNo",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "859b5938-e413-43d9-a1a5-154a3fe470b9",
+                      "is_selected": true,
+                      "display_name": "SalesOrderNo",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "c13eab4e-c834-4298-959a-dccc450051f9",
+                      "is_selected": true,
+                      "display_name": "DeliveryPosition",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "457480c0-799d-4bd3-acd4-4159f4ef0c6b",
+                      "is_selected": true,
+                      "display_name": "SalesOrderPosition",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "35432110-920e-4e5f-90c4-1e8f08305b79",
+                      "is_selected": true,
+                      "display_name": "Material",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "2e5a4ea8-449f-4650-bc6a-7aa59139bfdc",
+                      "is_selected": true,
+                      "display_name": "MaterialDescription",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "4a30d2de-41cc-4b50-be45-2df161822935",
+                      "is_selected": true,
+                      "display_name": "Plant",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "8e0ab244-26f2-4caa-a494-04cecaa65387",
+                      "is_selected": true,
+                      "display_name": "InvoiceCreationDate",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "f7128664-132b-4d0c-8938-e90c61fe1176",
+                      "is_selected": true,
+                      "display_name": "InvoiceCreationTime",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "97c856cb-8ae3-4758-a501-81378c554466",
+                      "is_selected": true,
+                      "display_name": "StorageLocationDepartment",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "0c411efb-13fe-47c6-a429-895e91e8f27a",
+                      "is_selected": true,
+                      "display_name": "InvoiceTypeBillingType",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "9aa2e888-ed8d-4ac7-aab4-f2aef28d5e1b",
+                      "is_selected": true,
+                      "display_name": "InvoiceTypeII",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "0990b8ca-7f0d-4106-b263-cec05b96ad56",
+                      "is_selected": true,
+                      "display_name": "Currency",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "53907c5c-42e1-48f6-8dc6-24b48e542729",
+                      "is_selected": true,
+                      "display_name": "SalesOrganization",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "3248bb46-e55e-4d8f-8c27-64232a9be9d4",
+                      "is_selected": true,
+                      "display_name": "DistributionChannel",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "55558f55-9b83-460b-be16-49af8409705d",
+                      "is_selected": true,
+                      "display_name": "InvoiceDate",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "1bf879bc-6eda-4ee0-9036-caaafb0da844",
+                      "is_selected": true,
+                      "display_name": "IncoTerm",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "5a7b01ad-f494-463d-bbc5-9df2760c8f17",
+                      "is_selected": true,
+                      "display_name": "IncoTermII",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "a43b69c1-3ffb-4f8e-b65c-4e02c5fba5ad",
+                      "is_selected": true,
+                      "display_name": "Customer",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "fe517a78-75e3-4ddf-8c33-7fb9d8e77fb8",
+                      "is_selected": true,
+                      "display_name": "InvoiceReferencePricingNo",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "ebf6416a-0de9-4232-bd2f-e22b30b5c9f5",
+                      "is_selected": true,
+                      "display_name": "CurrencyExchangeRate",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "6600a593-3b18-432e-b810-5ff61ffd0baa",
+                      "is_selected": true,
+                      "display_name": "ValidityDate",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "83a2061e-2a5b-40a1-8294-7013c5848624",
+                      "is_selected": true,
+                      "display_name": "BNDDT",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "78f7949c-54f2-4b4a-9653-09b5b632ade9",
+                      "is_selected": true,
+                      "display_name": "MarketingRequirementDate",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "efdc1587-a9f9-42b2-94b4-ec86c1d81967",
+                      "is_selected": true,
+                      "display_name": "PlantRequirementDate",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "d2d9ef45-2520-44fd-ba8f-7744226e4988",
+                      "is_selected": true,
+                      "display_name": "SalesOrderType",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e893d384-c2fa-498d-8a5b-6c40537614a4",
+                      "is_selected": true,
+                      "display_name": "Division",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "26fe6185-ea09-4096-93d8-35350570bd40",
+                      "is_selected": true,
+                      "display_name": "PONo",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "cbd64123-2073-421d-bdd2-8e14046314a5",
+                      "is_selected": true,
+                      "display_name": "PODate",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "7b652f30-8aef-478d-8605-270ae0233482",
+                      "is_selected": true,
+                      "display_name": "ConsigneeCode",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "5160db27-3d45-4408-afd0-8dc895a96326",
+                      "is_selected": true,
+                      "display_name": "LDStatus",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "fd0a1017-8026-4380-b27d-f149081a3eaa",
+                      "is_selected": true,
+                      "display_name": "LDDate",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "9719fd70-a1a8-4099-afd9-328ceafdbffa",
+                      "is_selected": true,
+                      "display_name": "LDCompletionDate",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "538b4cf1-68fd-4f84-8c22-00ea21d9ef71",
+                      "is_selected": true,
+                      "display_name": "EquipmentApplicationCode",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "22d7340c-82c9-4228-afdc-b4e341fbe740",
+                      "is_selected": true,
+                      "display_name": "Shop",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "59070750-c0fc-4393-9ea8-f22992574456",
+                      "is_selected": true,
+                      "display_name": "EquipmentApplicationDescription",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "32813e4e-9f91-417e-990e-12212082b870",
+                      "is_selected": true,
+                      "display_name": "Land",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "fd0e686d-8112-4b3e-a18b-3b896afe78a0",
+                      "is_selected": true,
+                      "display_name": "CustomerName",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "94901289-5be5-483b-8c1e-cb6d3bb907a0",
+                      "is_selected": true,
+                      "display_name": "Zone",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "4b45e8f2-67d4-4f5a-865d-c6e8859ad41e",
+                      "is_selected": true,
+                      "display_name": "IRPDPosition",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "55fe7e5f-84f0-4dd0-b102-cc12e858e2d0",
+                      "is_selected": true,
+                      "display_name": "IRPDStepNumber",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "4b4e9fe6-5622-4d01-9927-8b226d31f03d",
+                      "is_selected": true,
+                      "display_name": "IRPDCounter",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "1298830d-78ad-4725-b2bc-3dd4885077ee",
+                      "is_selected": true,
+                      "display_name": "IRPDConditionType",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "69578bb0-7930-4f6d-a8d5-d99702b1e8ce",
+                      "is_selected": true,
+                      "display_name": "IRPDDate",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "0292765a-31dc-43df-841e-c674e9dd8b62",
+                      "is_selected": true,
+                      "display_name": "IRPDConditionBaseValue",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "ce4c3e95-1e90-422c-b4f9-a999aad89ac3",
+                      "is_selected": true,
+                      "display_name": "IRPDStatus",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "b7ec22f2-a33a-4406-b215-f14fccb67b72",
+                      "is_selected": true,
+                      "display_name": "StorageDepartmentDescription",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "1ea20d42-9b17-4d72-9c3c-853943e6b4cc",
+                      "is_selected": true,
+                      "display_name": "CessValue",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "00545f1f-96be-4d51-b0e1-0410857b7d51",
+                      "is_selected": true,
+                      "display_name": "CentralSalesTax",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "c364959e-b49b-42be-99dd-f66c5b63ba93",
+                      "is_selected": true,
+                      "display_name": "EntryTaxOdiUP",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "bb11c5e5-349c-4fd8-9601-c0a516a21d8e",
+                      "is_selected": true,
+                      "display_name": "ExciseDuty",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "fd005854-ca7c-4ef8-a679-462194c744c6",
+                      "is_selected": true,
+                      "display_name": "GodownCVD",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "63f2ad8f-6271-4326-9a49-a09fff3e6505",
+                      "is_selected": true,
+                      "display_name": "FreightQty2",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "008bb679-7563-4ef9-acf0-09cbf9c05bfc",
+                      "is_selected": true,
+                      "display_name": "FreightLumpsum2",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "63a8820d-c19f-43e0-a8ab-20de761f4d29",
+                      "is_selected": true,
+                      "display_name": "FreightMT1",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "419a4cf1-9d64-4b72-b92f-dc92714ed007",
+                      "is_selected": true,
+                      "display_name": "FreightMT2",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "8eb54af1-9e78-4dcb-8818-6cc817177c91",
+                      "is_selected": true,
+                      "display_name": "FreightQty1",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e0314c05-972c-4569-8899-b8d36ff6bd6b",
+                      "is_selected": true,
+                      "display_name": "FreightLumpsum1",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "57a0baa7-bb6b-45b3-bd7c-9f9485537060",
+                      "is_selected": true,
+                      "display_name": "PackingLumpsum",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "9a68325e-d9cc-42c4-803f-5d7ca1cdf553",
+                      "is_selected": true,
+                      "display_name": "PackingChargeQty",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "37804cd0-4f0a-4327-9bd6-4cdfe91501e8",
+                      "is_selected": true,
+                      "display_name": "PackingChargeMT",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "3887c73e-19a0-4bf4-b0bf-22eaab9b7f0e",
+                      "is_selected": true,
+                      "display_name": "HigherEduCess",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e4c8c80d-894a-49fd-ac76-f6d0063bf00f",
+                      "is_selected": true,
+                      "display_name": "ServiceTax",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "789d1f57-a8c6-4b49-9699-60b94666dd96",
+                      "is_selected": true,
+                      "display_name": "EduCessOnServiceTax",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "485aa7d4-cd9b-42a8-8a6c-43e72bcedb7a",
+                      "is_selected": true,
+                      "display_name": "HighEduCessOnServiceTax",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "4e436f97-8e26-42d9-bf44-26221b5ddbed",
+                      "is_selected": true,
+                      "display_name": "Surcharge",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "88a42e85-d551-4af0-b047-e7158ed70e48",
+                      "is_selected": true,
+                      "display_name": "TaxColSource",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "2cef37d7-2a11-41a7-ab6d-c11bc271a5a6",
+                      "is_selected": true,
+                      "display_name": "VAT",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "c2573535-cc0f-4d3a-9ede-827dbf8cc456",
+                      "is_selected": true,
+                      "display_name": "VAT1",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "cc46f536-2006-4703-b7a0-a22f7b370c92",
+                      "is_selected": true,
+                      "display_name": "SBCess",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "366e5ec7-a606-4d88-b220-c7db076df6c7",
+                      "is_selected": true,
+                      "display_name": "KKCess",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "71c14b0a-e516-4f5c-928e-84ac5097bb78",
+                      "is_selected": true,
+                      "display_name": "Retail",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "481bda00-cc2d-4efe-b59c-1aa226d6716f",
+                      "is_selected": true,
+                      "display_name": "BasicPrice",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "9a54960c-17dc-41e6-8f72-cc0a2aae9778",
+                      "is_selected": true,
+                      "display_name": "PriceInclOfTaxes",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "cc1e8025-dcf5-46ad-b2fc-82b37871f77b",
+                      "is_selected": true,
+                      "display_name": "ActualSales",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "0090af70-456c-44a1-b59b-ff9bf7a0bf89",
+                      "is_selected": true,
+                      "display_name": "GodownRevenue",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "802662d2-c846-48a7-8692-508898aa326b",
+                      "is_selected": true,
+                      "display_name": "RevenueBasicDiscount",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "1eba9da7-1386-4204-a99a-41c84e82365c",
+                      "is_selected": true,
+                      "display_name": "StockistDiscNew",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "9ebdbddd-e89b-4598-9026-bf90f7b3821b",
+                      "is_selected": true,
+                      "display_name": "StockistDisc",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "8228eb70-58be-435a-959a-cfbb4b5ba06a",
+                      "is_selected": true,
+                      "display_name": "ForeignCurrencyValue",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "5e4b227b-be79-450a-b4c7-1ca83f78de5a",
+                      "is_selected": true,
+                      "display_name": "InvBasicPrice",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "7d7907f1-107a-4ef2-94e2-5c90eba7fc68",
+                      "is_selected": true,
+                      "display_name": "Discount",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "9df461e5-bd4c-44aa-89f5-521183626c6a",
+                      "is_selected": true,
+                      "display_name": "Discount1",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "b3ed5079-9502-478c-add3-06758940283e",
+                      "is_selected": true,
+                      "display_name": "StateGST",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "276ae3c2-011d-408e-9e21-dc4eee00382b",
+                      "is_selected": true,
+                      "display_name": "CentralGST",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "37579125-954c-4612-a887-dbc0bd106926",
+                      "is_selected": true,
+                      "display_name": "IntegratedGST",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "77e8b31b-0c2d-4b34-a380-a67f42936738",
+                      "is_selected": true,
+                      "display_name": "MineralRoyalty",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "28dfb7f9-3fa4-41d1-acf2-2b0cced3437a",
+                      "is_selected": true,
+                      "display_name": "DistMineralFund",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "c2684b48-1c44-46f3-93af-6f6acae9bcb2",
+                      "is_selected": true,
+                      "display_name": "DeemedExportGST",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "7bd49fb4-884e-4ea2-b3d3-409791f75f0b",
+                      "is_selected": true,
+                      "display_name": "DeemedExportCentralGST",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "b5d6b595-8c6a-40d0-9e7e-0ceae419cc25",
+                      "is_selected": true,
+                      "display_name": "DeemedExportStateGST",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "86c8dceb-c166-4cea-8085-6ccb262c43e3",
+                      "is_selected": true,
+                      "display_name": "Penalty",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "a01fa688-59a3-48bc-96f0-355aa7ba1393",
+                      "is_selected": true,
+                      "display_name": "SalesOrderBasicPrice",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "f09b635a-c8be-43d4-a3cc-bb9a177d5e49",
+                      "is_selected": true,
+                      "display_name": "BasicPriceNTO",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "c8454199-0372-4381-ba74-0298f4ed9af6",
+                      "is_selected": true,
+                      "display_name": "FreightExp",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "2bb1402f-177a-4a39-aec2-02b7712f9530",
+                      "is_selected": true,
+                      "display_name": "InspeLumpExp",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "bbe648fc-d29f-4467-a41a-098493f02f5f",
+                      "is_selected": true,
+                      "display_name": "TotalPriceExp",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "b60dffbd-e737-4212-8566-438212381dc4",
+                      "is_selected": true,
+                      "display_name": "TCSAmount",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e8a576aa-ec49-4647-b6dc-02d8bcd70df4",
+                      "is_selected": true,
+                      "display_name": "CountryName",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "a28993a2-5b1c-4a17-8815-f8effd285116",
+                      "is_selected": true,
+                      "display_name": "MaterialGroup",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "3efa7d80-cf6c-4f30-b2d1-92c73b84c6b7",
+                      "is_selected": true,
+                      "display_name": "Fcode",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "d2d648bf-970d-48cd-a15e-58e9e412281b",
+                      "is_selected": true,
+                      "display_name": "ExternalMaterialGroup",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "cde76c48-c53e-4067-9914-157241bf7a21",
+                      "is_selected": true,
+                      "display_name": "CancelledInvoice",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "82409249-4517-4e7b-8e02-fb4c4adbe664",
+                      "is_selected": true,
+                      "display_name": "InvoiceStatusNotEqualE",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "f0298481-152a-4563-b4c5-e938374f64f8",
+                      "is_selected": true,
+                      "display_name": "InvoiceStatusNotEqualX",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "a711a80a-a525-4465-b7eb-15696442a166",
+                      "is_selected": true,
+                      "display_name": "Sales",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "1581ea5f-406a-4d1e-a848-64e403ffabda",
+                      "is_selected": true,
+                      "display_name": "Amount",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "cb339e3c-9ca9-435d-800c-6809f24ae5c3",
+                      "is_selected": true,
+                      "display_name": "NetAmount",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "cce48052-0e6d-4ce6-a4f1-83aede1a3128",
+                      "is_selected": true,
+                      "display_name": "DiscountValue",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "2d1bf440-3fa5-462f-8266-77710496f580",
+                      "is_selected": true,
+                      "display_name": "TotalQuantity",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "290f62dd-39d1-402c-a1d8-203893c0efe2",
+                      "is_selected": true,
+                      "display_name": "Verticals",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "9300ff8c-cfe0-4e26-b414-914e4a5125d6",
+                      "is_selected": true,
+                      "display_name": "SubZone",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "f8a582e7-0c0c-4879-8ca9-9519c5cfb8fd",
+                      "is_selected": true,
+                      "display_name": "USD",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "4f527754-386c-4163-99e4-9a4b36f10842",
+                      "is_selected": true,
+                      "display_name": "EUR",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "0ce58589-99e5-4a11-9b66-cb7b3ccacf68",
+                      "is_selected": true,
+                      "display_name": "JPY",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "4ac48192-c387-4a62-b91c-6c2596331071",
+                      "is_selected": true,
+                      "display_name": "Territory",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "62d57096-9904-4680-a668-8c48d387797e",
+                      "is_selected": true,
+                      "display_name": "InvoiceDateForCalendar",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "601fd6c6-db1b-4fb9-bca2-ec27ac232ba7",
+                      "is_selected": true,
+                      "display_name": "Billing_Time",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "21b067c4-d700-468c-880a-0f6a32bbae06",
+                      "is_selected": true,
+                      "display_name": "Billing_Time_Within_Plant",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "64dc5051-d7bf-475a-adba-78560246f9fe",
+                      "is_selected": true,
+                      "display_name": "CustomerGroupName",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "86c08bf5-2121-4f7c-93f8-010f8a157f09",
+                  "is_selected": false,
+                  "display_name": "revenue",
+                  "type": "warehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "f8a90d1c-1070-40cb-89a7-e52c529a7b1f",
+                      "is_selected": true,
+                      "display_name": "Invoice_No",
+                      "type": "warehouse_tables.column",
+                      "data_type": "bigint",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "c45b56ab-2fa7-45a6-8b9a-66d3ff9dc2e5",
+                      "is_selected": true,
+                      "display_name": "Invoice_Position",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "2d50aa72-cccf-430d-a9ab-6885eb7f2dc5",
+                      "is_selected": true,
+                      "display_name": "Quantity",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "ecf8262f-07b5-475d-ace5-a4b9ce3cc3aa",
+                      "is_selected": true,
+                      "display_name": "UoM_Unit_of_measurement_",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "d5501550-9e28-43c7-8818-a722e6140849",
+                      "is_selected": true,
+                      "display_name": "Net_weight",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "6ccd9ed9-292f-4284-af5b-7ff822d16a25",
+                      "is_selected": true,
+                      "display_name": "Gross_weight",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "286be66a-4cd2-42b4-8bac-827cc1dac45e",
+                      "is_selected": true,
+                      "display_name": "Delivery_No",
+                      "type": "warehouse_tables.column",
+                      "data_type": "bigint",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "947b06d0-c2a8-4a01-8c43-16f4a237284e",
+                      "is_selected": true,
+                      "display_name": "Sales_order_No",
+                      "type": "warehouse_tables.column",
+                      "data_type": "bigint",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "cf69218d-99f2-4b17-a15e-f12af21d8f10",
+                      "is_selected": true,
+                      "display_name": "Delivery_Position",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "3ad16573-b429-4462-aca2-3b2bf2f0582b",
+                      "is_selected": true,
+                      "display_name": "Sales_order_Position",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "ebb48559-6f9e-447e-917d-e9b8742abd1b",
+                      "is_selected": true,
+                      "display_name": "Material",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "d0a29134-6c4f-4821-8c89-e1fbe6561b12",
+                      "is_selected": true,
+                      "display_name": "Material_Description",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "83290895-8bb7-4391-a3ab-1dc2e20ceeaa",
+                      "is_selected": true,
+                      "display_name": "Plant",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "5fdb0d44-a5af-41a6-9afb-63ff29fd4a97",
+                      "is_selected": true,
+                      "display_name": "Invoice_Creation_Date",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "3ac14202-a5ee-474d-a0e6-34af3c576c25",
+                      "is_selected": true,
+                      "display_name": "Storage_location___department",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "ddbf6393-bfba-476b-acd5-510586a4f4c2",
+                      "is_selected": true,
+                      "display_name": "Invoice_Type_Billing_Type",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e884f8f7-c067-41ec-8a1e-e4d983c6f9e4",
+                      "is_selected": true,
+                      "display_name": "Sales_Organization",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "82cd98c2-1069-45bb-89b3-a53dcfc125dc",
+                      "is_selected": true,
+                      "display_name": "Distribution_Channel",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "3cd9ba09-6d54-4636-aac7-ad6b99423d1b",
+                      "is_selected": true,
+                      "display_name": "Invoice_Date",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "23e35a9e-cf69-418b-9e42-624428e1bce0",
+                      "is_selected": true,
+                      "display_name": "Inco_Term",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "7080124a-647b-4827-92db-7d435ffb4034",
+                      "is_selected": true,
+                      "display_name": "Inco_Term_II",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "951bdb03-0387-4952-a30b-cc4e1e034bff",
+                      "is_selected": true,
+                      "display_name": "Customer",
+                      "type": "warehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "0a9a2699-8e24-4ef4-ac0e-29c61d44b8ca",
+                      "is_selected": true,
+                      "display_name": "Currency_Exchange_Rate",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "c7fc3e90-9bcf-4bdc-82b9-881fe89107d9",
+                      "is_selected": true,
+                      "display_name": "Sales_order_type",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "0b2b6ddb-0ac3-4b5c-851b-3edeaa4dad64",
+                      "is_selected": true,
+                      "display_name": "Division",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "7fe7e904-5d9c-4837-a234-103d86c93354",
+                      "is_selected": true,
+                      "display_name": "PO_No",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e69d2831-ed9e-471c-917e-aef2b4ada8a9",
+                      "is_selected": true,
+                      "display_name": "PO_Date",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "cca8576c-3ac9-471d-8200-57e9f8c83106",
+                      "is_selected": true,
+                      "display_name": "Shop",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "82947905-9147-4797-aa29-0aefc63f6775",
+                      "is_selected": true,
+                      "display_name": "Equipment_Application_Descrip",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "8b89d0e4-b82e-4085-8230-02154ea5e105",
+                      "is_selected": true,
+                      "display_name": "Land",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "67eb6e73-af92-483d-b258-706a7827da9b",
+                      "is_selected": true,
+                      "display_name": "Customer_Name",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "a5859623-a7ef-40ae-90a1-ae0bb0cc6ce3",
+                      "is_selected": true,
+                      "display_name": "Zone",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "6136d9aa-4a18-4674-9286-211762b2298c",
+                      "is_selected": true,
+                      "display_name": "Strg_location_dept_Description",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "a5e0dd18-6794-457b-84fe-95cbb276b9c6",
+                      "is_selected": true,
+                      "display_name": "Country_Name",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "dee5d3ce-f87a-433b-a10f-552151ba8cb1",
+                      "is_selected": true,
+                      "display_name": "Fcode",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "6f1ef7f5-abf2-47fb-8726-75fc0be59823",
+                      "is_selected": true,
+                      "display_name": "External_Material_Group",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "8ae896bb-9c6d-447e-9f51-2a55322cf3dd",
+                      "is_selected": true,
+                      "display_name": "Sales",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "ef0ccb66-017c-4510-9603-26c36fdccd25",
+                      "is_selected": true,
+                      "display_name": "Amount",
+                      "type": "warehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "c0793768-5752-4073-9972-a7c7c37d0553",
+                      "is_selected": true,
+                      "display_name": "Sub_Zone",
+                      "type": "warehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+table customer_group
+	lineageTag: df31004d-41e2-4c56-adc1-548c3f345bcc
+
+	column GROUP
+		dataType: string
+		lineageTag: 796a50da-6d84-4b23-bd08-32328b8b7b78
+		summarizeBy: none
+		sourceColumn: GROUP
+
+		annotation SummarizationSetBy = Automatic
+
+	column NAME
+		dataType: string
+		lineageTag: d579c5e1-9cef-44e5-a602-75f4eb81e390
+		summarizeBy: none
+		sourceColumn: NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column GroupCount
+		dataType: int64
+		formatString: 0
+		lineageTag: a63a8fb6-e8c4-4d65-95ff-7028a79ce1b4
+		summarizeBy: sum
+		sourceColumn: GroupCount
+
+		annotation SummarizationSetBy = Automatic
+
+	partition customer_group = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("42b76ifuwx7eveo4holctsljl4-wxfubj7bz3jedplj43cfohgqam.datawarehouse.fabric.microsoft.com", "raw_data"),
+				    dbo_customer_group = Source{[Schema="dbo",Item="customer_group"]}[Data]
+				in
+				    dbo_customer_group
+
+	annotation PBI_ResultType = Table
+

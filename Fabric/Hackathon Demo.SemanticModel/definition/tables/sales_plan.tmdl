@@ -1,0 +1,202 @@
+table sales_plan
+	lineageTag: b820e3db-c7bd-49ef-8565-dfb6f6ce1b00
+
+	column ABP_FREIGHT
+		dataType: int64
+		formatString: 0
+		lineageTag: 62949d8a-3c3c-404b-9ca2-b90a56b29216
+		summarizeBy: sum
+		sourceColumn: ABP_FREIGHT
+
+		annotation SummarizationSetBy = Automatic
+
+	column ABP_REVENUE
+		dataType: double
+		lineageTag: d5b3d87b-fd0f-42ab-a2f7-8e5bb26ec9f5
+		summarizeBy: sum
+		sourceColumn: ABP_REVENUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ABP_TONNAGE
+		dataType: double
+		lineageTag: 74a1b38e-0eea-4d1d-a9a5-2c05c8fbd8b4
+		summarizeBy: sum
+		sourceColumn: ABP_TONNAGE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AREA_HEAD
+		dataType: string
+		lineageTag: 9905b0a5-0102-4cf1-be2c-7c32508f5b2f
+		summarizeBy: none
+		sourceColumn: AREA_HEAD
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUS_GRP
+		dataType: string
+		lineageTag: e0c79464-cbf9-4c16-a10e-98ab60faab82
+		summarizeBy: none
+		sourceColumn: CUS_GRP
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUS_SUBGRP
+		dataType: string
+		lineageTag: 654c17f1-e637-4785-93c8-9896407da7bf
+		summarizeBy: none
+		sourceColumn: CUS_SUBGRP
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUST_NAME
+		dataType: string
+		lineageTag: 22414bdd-b5f5-4e41-9eb8-92be3f189a7c
+		summarizeBy: none
+		sourceColumn: CUST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column END_DATE
+		dataType: double
+		lineageTag: de4f654d-7b14-494e-af76-ab4e9660b2e9
+		summarizeBy: sum
+		sourceColumn: END_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ERDAT
+		dataType: string
+		lineageTag: b88ad27b-9cf8-4cba-b1dd-a7319b28a1a2
+		summarizeBy: none
+		sourceColumn: ERDAT
+
+		annotation SummarizationSetBy = Automatic
+
+	column ERNAM
+		dataType: string
+		lineageTag: 89133ba6-2b5c-49f4-8ea3-1cd477c688d5
+		summarizeBy: none
+		sourceColumn: ERNAM
+
+		annotation SummarizationSetBy = Automatic
+
+	column ERZET
+		dataType: string
+		lineageTag: 41a6f59a-28a6-4895-b149-bf81cbdf878d
+		summarizeBy: none
+		sourceColumn: ERZET
+
+		annotation SummarizationSetBy = Automatic
+
+	column INCOTERM
+		dataType: string
+		lineageTag: a9d233c5-5dbf-4fa7-a53e-0c671e34663a
+		summarizeBy: none
+		sourceColumn: INCOTERM
+
+		annotation SummarizationSetBy = Automatic
+
+	column KUNNR
+		dataType: string
+		lineageTag: ac7b7760-d200-4d1f-9e97-5a24b9db3e70
+		summarizeBy: none
+		sourceColumn: KUNNR
+
+		annotation SummarizationSetBy = Automatic
+
+	column PLANNED_FREIGHT
+		dataType: int64
+		formatString: 0
+		lineageTag: 646df18a-7d8d-4f46-8dce-0b9ea2ebe076
+		summarizeBy: sum
+		sourceColumn: PLANNED_FREIGHT
+
+		annotation SummarizationSetBy = Automatic
+
+	column PLANNED_REVENUE
+		dataType: int64
+		formatString: 0
+		lineageTag: ca1ca7a9-68cf-4cdc-8abd-720e30a659a9
+		summarizeBy: sum
+		sourceColumn: PLANNED_REVENUE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PLANNED_TONNAGE
+		dataType: int64
+		formatString: 0
+		lineageTag: f86b0433-b391-4838-95d7-2ff9590247b0
+		summarizeBy: sum
+		sourceColumn: PLANNED_TONNAGE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_KAM
+		dataType: string
+		lineageTag: 33f24636-ea31-412c-b2f0-357c9550dbaa
+		summarizeBy: none
+		sourceColumn: SALES_KAM
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_TYPE
+		dataType: string
+		lineageTag: 7aded16d-bdb1-490c-8b57-911035fdae43
+		summarizeBy: none
+		sourceColumn: SALES_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SL_NO
+		dataType: string
+		lineageTag: 95bb839e-76f0-4ce2-af3d-581dc8a4293f
+		summarizeBy: none
+		sourceColumn: SL_NO
+
+		annotation SummarizationSetBy = Automatic
+
+	column SNOP_PRODUCT_GRP
+		dataType: string
+		lineageTag: 63917cb5-f048-420e-ac62-b077620d9821
+		summarizeBy: none
+		sourceColumn: SNOP_PRODUCT_GRP
+
+		annotation SummarizationSetBy = Automatic
+
+	column START_DATE
+		dataType: double
+		lineageTag: c25bb196-83c3-4550-b477-0ed1b4863b7b
+		summarizeBy: sum
+		sourceColumn: START_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PlanDateForCalendar
+		dataType: string
+		lineageTag: 25c74cc3-4f77-49a5-8e7a-5bebf3adfeb5
+		summarizeBy: none
+		sourceColumn: PlanDateForCalendar
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sales_plan = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("42b76ifuwx7eveo4holctsljl4-wxfubj7bz3jedplj43cfohgqam.datawarehouse.fabric.microsoft.com", "raw_data"),
+				    dbo_sales_plan = Source{[Schema="dbo",Item="sales_plan"]}[Data]
+				in
+				    dbo_sales_plan
+
+	annotation PBI_ResultType = Table
+

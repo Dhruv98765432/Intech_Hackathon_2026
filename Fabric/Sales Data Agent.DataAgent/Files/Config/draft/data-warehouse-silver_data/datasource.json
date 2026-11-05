@@ -31,7 +31,7 @@
               "children": [
                 {
                   "id": "d462036b-7d6b-4b1a-9a0a-793a90e53692",
-                  "is_selected": true,
+                  "is_selected": false,
                   "display_name": "sales_plan",
                   "type": "warehouse_tables.table",
                   "description": null,
@@ -238,7 +238,7 @@
                 },
                 {
                   "id": "3a70bf02-758a-4712-abd1-17177be8a995",
-                  "is_selected": true,
+                  "is_selected": false,
                   "display_name": "customer_group",
                   "type": "warehouse_tables.table",
                   "description": null,
@@ -1417,7 +1417,7 @@
                 },
                 {
                   "id": "86c08bf5-2121-4f7c-93f8-010f8a157f09",
-                  "is_selected": true,
+                  "is_selected": false,
                   "display_name": "revenue",
                   "type": "warehouse_tables.table",
                   "description": null,

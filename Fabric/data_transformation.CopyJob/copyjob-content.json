@@ -30,70 +30,6 @@
   },
   "activities": [
     {
-      "id": "e91f84ba-6f46-4e40-85dd-ffd4c3005f7f",
-      "properties": {
-        "source": {
-          "datasetSettings": {
-            "schema": "dbo",
-            "table": "customer_group"
-          },
-          "partitionSettings": {
-            "partitionOption": "None"
-          }
-        },
-        "destination": {
-          "tableOption": "autoCreate",
-          "writeBehavior": "Append",
-          "datasetSettings": {
-            "schema": "dbo",
-            "table": "customer_group"
-          }
-        },
-        "enableStaging": true,
-        "translator": {
-          "type": "TabularTranslator"
-        },
-        "typeConversionSettings": {
-          "typeConversion": {
-            "allowDataTruncation": true,
-            "treatBooleanAsNumber": false
-          }
-        }
-      }
-    },
-    {
-      "id": "49ca129e-18e4-4d3b-9018-0e83f38204df",
-      "properties": {
-        "source": {
-          "datasetSettings": {
-            "schema": "dbo",
-            "table": "revenue"
-          },
-          "partitionSettings": {
-            "partitionOption": "None"
-          }
-        },
-        "destination": {
-          "tableOption": "autoCreate",
-          "writeBehavior": "Append",
-          "datasetSettings": {
-            "schema": "dbo",
-            "table": "revenue"
-          }
-        },
-        "enableStaging": true,
-        "translator": {
-          "type": "TabularTranslator"
-        },
-        "typeConversionSettings": {
-          "typeConversion": {
-            "allowDataTruncation": true,
-            "treatBooleanAsNumber": false
-          }
-        }
-      }
-    },
-    {
       "id": "71428c21-1115-4dc8-9457-129a6edd0be8",
       "properties": {
         "source": {
@@ -111,38 +47,6 @@
           "datasetSettings": {
             "schema": "dbo",
             "table": "sales"
-          }
-        },
-        "enableStaging": true,
-        "translator": {
-          "type": "TabularTranslator"
-        },
-        "typeConversionSettings": {
-          "typeConversion": {
-            "allowDataTruncation": true,
-            "treatBooleanAsNumber": false
-          }
-        }
-      }
-    },
-    {
-      "id": "b008531a-ed91-45bd-859d-3a803963f8ac",
-      "properties": {
-        "source": {
-          "datasetSettings": {
-            "schema": "dbo",
-            "table": "sales_plan"
-          },
-          "partitionSettings": {
-            "partitionOption": "None"
-          }
-        },
-        "destination": {
-          "tableOption": "autoCreate",
-          "writeBehavior": "Append",
-          "datasetSettings": {
-            "schema": "dbo",
-            "table": "sales_plan"
           }
         },
         "enableStaging": true,
