@@ -475,16 +475,6 @@ please upload to lakehouse
 # CELL ********************
 
 
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
-
-# CELL ********************
-
-
 
 # ============================================================
 # 5. PREPARE PANDAS DATA FOR SPARK
